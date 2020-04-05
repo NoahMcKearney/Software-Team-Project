@@ -1,6 +1,6 @@
 <UI version="4.0" >
  <class>Tic_Tac_Toe</class>
- <widget class="QWidget" name="Tic_Tac_Toe" >
+ <widget class="QDialog" name="Tic_Tac_Toe" >
   <property name="objectName" >
    <string notr="true">Tic_Tac_Toe</string>
   </property>

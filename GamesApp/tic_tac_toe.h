@@ -1,16 +1,16 @@
 #pragma once
 
-#include <QWidget>
+#include <QDialog>
 #include "ui_tic_tac_toe.h"
 
-class Tic_Tac_Toe : public QWidget
+class Tic_Tac_Toe : public QDialog, public Ui::Tic_Tac_Toe
 {
 	Q_OBJECT
 
 public:
 	Tic_Tac_Toe(QWidget *parent = Q_NULLPTR);
-	~Tic_Tac_Toe();
 
-private:
-	Ui::Tic_Tac_Toe ui;
+private slots:
+	void on_XChoicepushbutton_clicked();
+	void on_OChoicepushbutton_clicked();
 };
