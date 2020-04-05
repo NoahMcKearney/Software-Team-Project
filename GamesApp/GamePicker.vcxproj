@@ -98,13 +98,16 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="tic_tac_toe.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="tic_tac_toe.h" />
     <QtMoc Include="GamePicker.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="GamePicker.ui" />
+    <QtUic Include="tic_tac_toe.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="GamePicker.qrc" />
