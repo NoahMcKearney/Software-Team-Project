@@ -3,7 +3,7 @@
 #include <QtWidgets/QWidget>
 #include "ui_GamePicker.h"
 
-// (Noah was here) Main screen that allows user to select which game to play.
+// Main screen that allows user to select which game to play...
 class GamePicker : public QWidget
 {
 	Q_OBJECT
