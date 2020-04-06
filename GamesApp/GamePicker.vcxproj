@@ -93,6 +93,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="GamePicker.cpp" />
+    <ClCompile Include="hangman.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -103,10 +104,12 @@
   <ItemGroup>
     <QtMoc Include="tic_tac_toe.h" />
     <QtMoc Include="GamePicker.h" />
+    <QtMoc Include="hangman.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="GamePicker.ui" />
+    <QtUic Include="hangman.ui" />
     <QtUic Include="tic_tac_toe.ui" />
   </ItemGroup>
   <ItemGroup>

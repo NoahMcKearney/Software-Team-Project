@@ -7,6 +7,9 @@
     <ClCompile Include="tic_tac_toe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="hangman.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -19,6 +22,9 @@
     <QtMoc Include="tic_tac_toe.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="hangman.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="GamePicker.qrc" />
@@ -26,6 +32,9 @@
   <ItemGroup>
     <QtUic Include="GamePicker.ui" />
     <QtUic Include="tic_tac_toe.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="hangman.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
