@@ -1,9 +1,9 @@
 #pragma once
 
 #include <QDialog>
-#include "ui_tic_tac_toe.h"
+#include "ui_Tic_Tac_Toe.h"
 
-class Tic_Tac_Toe : public QDialog, public Ui::Tic_Tac_Toe
+class Tic_Tac_Toe : public QDialog
 {
 	Q_OBJECT
 
@@ -13,4 +13,6 @@ public:
 private slots:
 	void on_XChoicepushbutton_clicked();
 	void on_OChoicepushbutton_clicked();
+private:
+	Ui::Tic_Tac_Toe ui;
 };
