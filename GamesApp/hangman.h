@@ -14,4 +14,5 @@ private:
 	Ui::hangman* ui;
 private slots:
 	void letterPressed();
+	void on_startButton_clicked();
 };
