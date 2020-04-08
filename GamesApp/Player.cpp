@@ -11,7 +11,7 @@ void Player::setSymbol(std::string sUpdateSymbol)
 }
 std::string Player::getSymbol()
 {
-	return 0;
+	return sSymbol;
 }
 
 

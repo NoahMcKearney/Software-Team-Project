@@ -94,6 +94,7 @@
   <ItemGroup>
     <ClCompile Include="Computer.cpp" />
     <ClCompile Include="GamePicker.cpp" />
+    <ClCompile Include="gamePlay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -106,6 +107,7 @@
     <QtMoc Include="tic_tac_toe.h" />
     <QtMoc Include="GamePicker.h" />
     <ClInclude Include="Computer.h" />
+    <ClInclude Include="gamePlay.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>

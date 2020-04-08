@@ -11,6 +11,7 @@ public:
 	Computer(std::string sStartingSymbol);
 	void setSymbol(std::string sUpdateSymbol);
 	std::string getSymbol();
+	void computerTurn();
 };
 
 #endif //TIC_Tac_Toe_COMPUTER_H
