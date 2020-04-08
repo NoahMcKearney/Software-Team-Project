@@ -39,6 +39,12 @@ void Hangman::letterPressed() {
 	QString valueOnButton = button->text();
 	QString buttonName = button->objectName();
 
+	TESTLABEL->setText(valueOnButton);
+	TESTLABEL2->setText(buttonName);
+	QString word = QString::fromStdString(userOne.getWord());
+	TESTLABEL3->setText(word);
+
+
 	if (userOne.checkWord(valueOnButton.toStdString()) == false) {
 		// display line based upon how many guesses got wrong
 		
