@@ -44,7 +44,7 @@ void Hangman::letterPressed() {
 	QString word = QString::fromStdString(userOne.getWord());
 	TESTLABEL3->setText(word);
 
-
+	
 	if (userOne.checkWord(valueOnButton.toStdString()) == false) {
 		// display line based upon how many guesses got wrong
 		
@@ -53,5 +53,4 @@ void Hangman::letterPressed() {
 		// display letter
 	}
 	Hangman::findChild<QPushButton*>(buttonName)->setEnabled(false);
-
 }

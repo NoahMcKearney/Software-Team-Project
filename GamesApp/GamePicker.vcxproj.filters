@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="GamePicker.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="tic_tac_toe.cpp">
       <Filter>Source Files</Filter>
@@ -11,6 +10,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -60,5 +62,14 @@
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
       <ParseFiles>true</ParseFiles>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GamePicker.h.orig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GamePicker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="hangman_words.txt" />
   </ItemGroup>
 </Project>

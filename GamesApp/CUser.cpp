@@ -3,15 +3,28 @@
 #include <vector>
 #include <iostream>
 #include <random>
+#include <string>
+#include<fstream>
+//#include<fstream>
 
 void CUser::setWord() {
-
-	std::string wordsArray[4] = { "cat", "bird", "earthworm", "creature" };
 	
-	srand(time(NULL));
-	int iRandomIndex = rand() % 4 + 1;
+	// open a file and read:
+	std::string line;
+	// vector of words from file to choose from:
+	std::vector<std::string> lines;
 
-	m_wordGuess = wordsArray[iRandomIndex];
+	srand(time(0));
+	std::ifstream file("hangman_words.txt");
+
+	int total_lines = 0;
+	while (std::getline(file, line)) {
+		total_lines++;
+		lines.push_back(line);
+	}
+
+	int random_number = rand() % total_lines;
+	m_wordGuess = lines[random_number];
 }
 
 std::string CUser::getWord() {

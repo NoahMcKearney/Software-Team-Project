@@ -1,0 +1,5 @@
+DOG
+CAT
+SNHU
+LION
+BEar

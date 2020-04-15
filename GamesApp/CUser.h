@@ -7,7 +7,6 @@ private:
 	std::string m_wordGuess;
 	int m_wrongGuess = 0;
 	int m_amountLettersPressed{ 0 };
-
 public:
 	void setWord();
 	std::string getWord();

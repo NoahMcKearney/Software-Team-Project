@@ -120,6 +120,15 @@
   <ItemGroup>
     <ResourceCompile Include="GamePicker.rc" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="GamePicker.h.orig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GamePicker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="hangman_words.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />
