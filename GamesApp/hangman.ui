@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>479</width>
-    <height>629</height>
+    <height>625</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -1197,7 +1197,7 @@ QPushButton:pressed {
     <string>Start</string>
    </property>
   </widget>
-  <widget class="Line" name="line_14">
+  <widget class="Line" name="letterLines_0">
    <property name="geometry">
     <rect>
      <x>40</x>
@@ -1210,7 +1210,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_15">
+  <widget class="Line" name="letterLines_1">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -1223,7 +1223,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_16">
+  <widget class="Line" name="letterLines_2">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -1236,7 +1236,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_17">
+  <widget class="Line" name="letterLines_3">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -1249,7 +1249,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_18">
+  <widget class="Line" name="letterLines_4">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -1262,7 +1262,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_19">
+  <widget class="Line" name="letterLines_5">
    <property name="geometry">
     <rect>
      <x>390</x>
@@ -1275,7 +1275,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLetter1">
+  <widget class="QLabel" name="labelLetter0">
    <property name="geometry">
     <rect>
      <x>50</x>
@@ -1288,7 +1288,7 @@ QPushButton:pressed {
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLetter2">
+  <widget class="QLabel" name="labelLetter1">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -1301,7 +1301,7 @@ QPushButton:pressed {
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLetter3">
+  <widget class="QLabel" name="labelLetter2">
    <property name="geometry">
     <rect>
      <x>190</x>
@@ -1314,7 +1314,7 @@ QPushButton:pressed {
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLetter4">
+  <widget class="QLabel" name="labelLetter3">
    <property name="geometry">
     <rect>
      <x>260</x>
@@ -1327,7 +1327,7 @@ QPushButton:pressed {
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLetter5">
+  <widget class="QLabel" name="labelLetter4">
    <property name="geometry">
     <rect>
      <x>330</x>
@@ -1340,7 +1340,7 @@ QPushButton:pressed {
     <string>TextLabel</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelLetter6">
+  <widget class="QLabel" name="labelLetter5">
    <property name="geometry">
     <rect>
      <x>400</x>
@@ -1423,6 +1423,19 @@ QPushButton:pressed {
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="endGameLabel">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>200</y>
+     <width>47</width>
+     <height>13</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

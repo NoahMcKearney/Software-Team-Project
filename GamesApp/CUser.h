@@ -10,8 +10,9 @@ private:
 public:
 	void setWord();
 	std::string getWord();
-	bool checkWord(std::string buttonValue);
-	int getAmountGuessIsWrong();
+	void guessWrongCounter();
+	int getAmountGuessesWrong();
+	bool checkWord(std::string buttonValue, int &letterIndex);
 	// method to show labels and lines of how many
 	// letters in the word
 //	void showLabelsLinesWord();

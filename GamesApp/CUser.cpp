@@ -31,26 +31,37 @@ std::string CUser::getWord() {
 	return m_wordGuess;
 }
 
-bool CUser::checkWord(std::string buttonValue)
+void CUser::guessWrongCounter() {
+	m_wrongGuess++;
+}
+
+int CUser::getAmountGuessesWrong() {
+	return m_wrongGuess;
+}
+
+bool CUser::checkWord(std::string buttonValue, int &letterIndex)
 {
 	std::string sWord = getWord();
 	for (int index = 0; index < sWord.length(); index++) {
+		
 		if (sWord[index] == buttonValue[0]) {
-			m_wrongGuess++;
+			// Displays one character of the word on the screen:
+			letterIndex = index;
+			return true;
+		}
+		else if (index+1 == sWord.length()) {
+			guessWrongCounter();
 			// Guess is wrong:
 			return false;
 		}
-//		else if {
-			
-//		}
+		else {
+			continue;
+		}
 	}
 
 }
 
-int CUser::getAmountGuessIsWrong() {
-	return m_wrongGuess;
-}
-
+// -----CONSIDER DELETING AT THE END----
 /*void CUser::displayHideLetter() {
 	int sizeWord = getWord().length();
 	switch (sizeWord)

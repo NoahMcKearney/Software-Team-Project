@@ -2,4 +2,4 @@ DOG
 CAT
 SNHU
 LION
-BEar
+BEAR

@@ -11,6 +11,7 @@ public:
 	~Hangman();
 private:
 	Ui::hangman* ui;
+	void updateUI(bool bGuessingWord);
 private slots:
 	void letterPressed();
 	void on_startButton_clicked();
