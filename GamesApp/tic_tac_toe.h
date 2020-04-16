@@ -26,6 +26,7 @@ private slots:
 	void on_NinthpushButton_clicked();
 	void updateUI(int ibutton);
 	void computerTurn();
+	void updateBoard(int iButtonIndex);
 
 private:
 	Ui::Tic_Tac_Toe ui;
