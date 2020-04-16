@@ -9,15 +9,69 @@
 #include "Computer.h"
 #include "gamePlay.h"
 
+const int size = 9;
+std::vector<std::string> BoardVector(size);
+
+int iButtonPressed = 0;
 Player User("");
 Computer Opponent("O");
 GamePlay board("0");
+
+void updateBoard(int iButtonIndex);
 
 Tic_Tac_Toe::Tic_Tac_Toe(QWidget *parent)
 	: QDialog(parent)
 {
 	ui.setupUi(this);
 }
+
+void Tic_Tac_Toe::updateUI(int ibutton)
+{
+	switch (ibutton)
+	{
+	case 1:
+		ui.FirstpushButton->setEnabled(false);
+		//ui.FirstpushButton->pressed();
+		ui.FirstpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 2:
+		ui.SecondpushButton->setEnabled(false);
+		//ui.SecondpushButton->pressed();
+		ui.SecondpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 3:
+		ui.ThirdpushButton->setEnabled(false);
+		//ui.ThirdpushButton->pressed();
+		ui.ThirdpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 4:
+		ui.FifthpushButton->setEnabled(false);
+		//ui.FifthpushButton->pressed();
+		ui.FifthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 5:
+		ui.SixthpushButton->setEnabled(false);
+		//ui.SixthpushButton->pressed();
+		ui.SixthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 6:
+		ui.SeventhpushButton->setEnabled(false);
+		//ui.SeventhpushButton->pressed();
+		ui.SeventhpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 7:
+		ui.SeventhpushButton->setEnabled(false);
+		//ui.SeventhpushButton->pressed();
+		ui.SeventhpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	case 8:
+		ui.EighthpushButton->setEnabled(false);
+		//ui.EighthpushButton->pressed();
+		ui.EighthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
+		break;
+	}
+}
+
 
 void Tic_Tac_Toe::on_XChoicepushbutton_clicked()
 {
@@ -37,42 +91,99 @@ void Tic_Tac_Toe::on_OChoicepushbutton_clicked()
 void Tic_Tac_Toe::on_FirstpushButton_clicked()
 {
 	ui.FirstpushButton->setText(QString::fromStdString(User.getSymbol()));
-	board.updateBoardProgress(0, 0, User.getSymbol());
-	Opponent.computerTurn();
+
+	iButtonPressed = 1;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 
 void Tic_Tac_Toe::on_SecondpushButton_clicked()
 {
+	ui.SecondpushButton->setText(QString::fromStdString(User.getSymbol()));
 
+	iButtonPressed = 2;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 {
+	ui.ThirdpushButton->setText(QString::fromStdString(User.getSymbol()));
 
+	iButtonPressed = 3;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_FourthpushButton_clicked()
 {
+	ui.FourthpushButton->setText(QString::fromStdString(User.getSymbol()));
 
+	iButtonPressed = 4;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_FifthpushButton_clicked()
 {
+	ui.FifthpushButton->setText(QString::fromStdString(User.getSymbol()));
 
+	iButtonPressed = 5;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_SixthpushButton_clicked()
 {
+	ui.SixthpushButton->setText(QString::fromStdString(User.getSymbol()));
 
+	iButtonPressed = 6;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 {
+	ui.SeventhpushButton->setText(QString::fromStdString(User.getSymbol()));
 
-
+	iButtonPressed = 7;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_EighthpushButton_clicked()
 {
+	ui.EighthpushButton->setText(QString::fromStdString(User.getSymbol()));
 
-
+	iButtonPressed = 8;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
 void Tic_Tac_Toe::on_NinthpushButton_clicked()
 {
+	ui.NinthpushButton->setText(QString::fromStdString(User.getSymbol()));
 
-
+	iButtonPressed = 9;
+	updateBoard(iButtonPressed - 1);
+	computerTurn();
 }
+
+void updateBoard(int iButtonIndex)
+{
+	BoardVector[iButtonIndex] = User.getSymbol();
+}
+
+void Tic_Tac_Toe::computerTurn()
+{
+	bool bSpotTaken = false;
+	while (!bSpotTaken)
+	{
+		int index = rand() % 9 + 0;
+
+		if (Opponent.getSymbol() == BoardVector[index])
+		{
+			bSpotTaken = false;
+		}
+		else
+		{
+			BoardVector[index] = Opponent.getSymbol();
+			updateUI(index+1);
+			bSpotTaken = true;
+		}
+	}
+}
+

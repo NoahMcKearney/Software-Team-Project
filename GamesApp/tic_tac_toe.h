@@ -24,6 +24,10 @@ private slots:
 	void on_SeventhpushButton_clicked();
 	void on_EighthpushButton_clicked();
 	void on_NinthpushButton_clicked();
+	void updateUI(int ibutton);
+	void computerTurn();
+
 private:
 	Ui::Tic_Tac_Toe ui;
 };
+
