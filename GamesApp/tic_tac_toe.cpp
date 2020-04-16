@@ -30,52 +30,42 @@ void Tic_Tac_Toe::updateUI(int ibutton)
 	{
 	case 1:
 		ui.FirstpushButton->setDisabled(true);
-		//ui.FirstpushButton->pressed();
 		ui.FirstpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 2:
 		ui.SecondpushButton->setDisabled(true);
-		//ui.SecondpushButton->pressed();
 		ui.SecondpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 3:
 		ui.ThirdpushButton->setDisabled(true);
-		//ui.ThirdpushButton->pressed();
 		ui.ThirdpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 4:
 		ui.FourthpushButton->setDisabled(true);
-		//ui.FifthpushButton->pressed();
 		ui.FourthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 5:
 		ui.FifthpushButton->setDisabled(true);
-		//ui.SixthpushButton->pressed();
 		ui.FifthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 6:
 		ui.SixthpushButton->setDisabled(true);
-		//ui.SeventhpushButton->pressed();
 		ui.SixthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 7:
 		ui.SeventhpushButton->setDisabled(true);
-		//ui.SeventhpushButton->pressed();
 		ui.SeventhpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 8:
 		ui.EighthpushButton->setDisabled(true);
-		//ui.EighthpushButton->pressed();
 		ui.EighthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 9:
 		ui.NinthpushButton->setDisabled(true);
-		//ui.EighthpushButton->pressed();
 		ui.NinthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	}
 }
-
 
 void Tic_Tac_Toe::on_XChoicepushbutton_clicked()
 {
@@ -204,5 +194,19 @@ void Tic_Tac_Toe::computerTurn()
 			iCountComputerIndex++;
 		}
 	}
+}
+
+void Tic_Tac_Toe::winnerCheck()
+{
+	std::string Button1 = BoardVector[0];
+	std::string Button2 = BoardVector[1];
+	std::string indexZero = BoardVector[2];
+	std::string indexZero = BoardVector[3];
+	std::string indexZero = BoardVector[4];
+	std::string indexZero = BoardVector[5];
+	std::string indexZero = BoardVector[6];
+	std::string indexZero = BoardVector[7];
+	std::string indexZero = BoardVector[8];
+
 }
 

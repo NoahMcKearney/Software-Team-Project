@@ -27,6 +27,7 @@ private slots:
 	void updateUI(int ibutton);
 	void computerTurn();
 	void updateBoard(int iButtonIndex);
+	void winnerCheck();
 
 private:
 	Ui::Tic_Tac_Toe ui;
