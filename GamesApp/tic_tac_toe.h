@@ -29,6 +29,7 @@ private slots:
 	void updateBoard(int iButtonIndex);
 	void winnerCheck();
 
+
 private:
 	Ui::Tic_Tac_Toe ui;
 };
