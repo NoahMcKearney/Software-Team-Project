@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>479</width>
-    <height>625</height>
+    <width>486</width>
+    <height>645</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -955,7 +955,7 @@ QPushButton:pressed {
     <string>Reveal</string>
    </property>
   </widget>
-  <widget class="Line" name="line_0">
+  <widget class="Line" name="line_9">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -971,7 +971,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_1">
+  <widget class="Line" name="line_10">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -987,7 +987,7 @@ QPushButton:pressed {
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_2">
+  <widget class="Line" name="line_11">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -1003,7 +1003,7 @@ QPushButton:pressed {
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_3">
+  <widget class="Line" name="line_12">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -1019,7 +1019,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_4">
+  <widget class="Line" name="line_13">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -1035,7 +1035,7 @@ QPushButton:pressed {
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_5">
+  <widget class="Line" name="line_0">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -1051,12 +1051,12 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_6">
+  <widget class="Line" name="line_1">
    <property name="geometry">
     <rect>
-     <x>200</x>
+     <x>190</x>
      <y>100</y>
-     <width>16</width>
+     <width>21</width>
      <height>16</height>
     </rect>
    </property>
@@ -1067,7 +1067,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_7">
+  <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -1083,7 +1083,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_9">
+  <widget class="Line" name="line_3">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -1099,7 +1099,7 @@ QPushButton:pressed {
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_10">
+  <widget class="Line" name="line_5">
    <property name="geometry">
     <rect>
      <x>200</x>
@@ -1115,7 +1115,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_8">
+  <widget class="Line" name="line_4">
    <property name="geometry">
     <rect>
      <x>110</x>
@@ -1131,7 +1131,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_12">
+  <widget class="Line" name="line_7">
    <property name="geometry">
     <rect>
      <x>157</x>
@@ -1147,7 +1147,7 @@ QPushButton:pressed {
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_11">
+  <widget class="Line" name="line_6">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -1163,7 +1163,7 @@ QPushButton:pressed {
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="Line" name="line_13">
+  <widget class="Line" name="line_8">
    <property name="geometry">
     <rect>
      <x>190</x>

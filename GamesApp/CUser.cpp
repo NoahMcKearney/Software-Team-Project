@@ -47,6 +47,7 @@ bool CUser::checkWord(std::string buttonValue, int &letterIndex)
 		if (sWord[index] == buttonValue[0]) {
 			// Displays one character of the word on the screen:
 			letterIndex = index;
+			m_amountLettersGuessed++;
 			return true;
 		}
 		else if (index+1 == sWord.length()) {
@@ -60,6 +61,20 @@ bool CUser::checkWord(std::string buttonValue, int &letterIndex)
 	}
 
 }
+
+bool CUser::winLoseGame() {
+	
+//  if(m_amount)
+
+//	if(m_amountLettersGuessed == )
+	return 0;
+}
+
+void CUser::resetMemberVariables(int wrongGuessCounter, int amountLettersPressed) {
+	m_wrongGuess = wrongGuessCounter;
+	m_amountLettersPressed = amountLettersPressed;
+}
+
 
 // -----CONSIDER DELETING AT THE END----
 /*void CUser::displayHideLetter() {

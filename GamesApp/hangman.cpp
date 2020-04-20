@@ -6,6 +6,7 @@ QString qs;
 Hangman::Hangman(QWidget* parent)
 	: QDialog(parent)
 {
+	setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 	setupUi(this);
 	QPushButton startButton;
 	QPushButton* alphabetButtons[26];
@@ -63,29 +64,35 @@ void Hangman::updateUI(bool bGuessingWord) {
 	}
 }
 
-void Hangman::on_startButton_clicked() {
-
+void Hangman::beginNewGame(){
 	userOne.setWord();
 	startButton->setVisible(false);
-	int counter2 = 0;
-	int counter3 = 0;
-	int numLinesCounter = 1;
-	while (numLinesCounter != 21) {
-		if(numLinesCounter <= 6){
-			QString lineNames = "letterLines_" + QString::number(counter2);
+	int numLinesCounter = 0;
+	int counter2 = 1;
+	while (numLinesCounter < 34) {
+		//QString lineNames = "line_" + QString::number(numLinesCounter);
+		//Hangman::findChild<QWidget*>(lineNames)->setVisible(false);
+		//numLinesCounter++;
+		//----------
+
+		if (numLinesCounter < 9) {
+			QString lineNames = "line_" + QString::number(numLinesCounter);
 			Hangman::findChild<QWidget*>(lineNames)->setVisible(false);
-			counter2++;
 		}
 		else {
-			QString lineNames2 = "line_" + QString::number(counter3);
-			Hangman::findChild<QWidget*>(lineNames2)->setVisible(false);
-			counter3++;
+			QString buttonNames = "buttonAlphabet" + QString::number(counter2);
+			Hangman::findChild<QWidget*>(buttonNames)->setEnabled(true);
+			counter2++;
 		}
-
 		numLinesCounter++;
-	}	
-
+		
+	}
 	updateUI(false);
+}
+
+void Hangman::on_startButton_clicked() {
+
+	beginNewGame();
 }
 
 void Hangman::letterPressed() {
@@ -100,6 +107,8 @@ void Hangman::letterPressed() {
 
 	//----------EDIT BELOW, MAKE WORK IF THE USER DID NOT GUESS CORRECTLY, 
 	// End of the game, did not guess correctly:
+
+
 	if (userOne.getAmountGuessesWrong() == 14) {
 		endGameLabel->setText("End Game, the word is " + QString::fromStdString(userOne.getWord()));
 	}
@@ -115,9 +124,27 @@ void Hangman::letterPressed() {
 		QString showLine = "labelLetter" + QString::number(letterIndex);
 		Hangman::findChild<QLabel*>(showLine)->setText(valueOnButton);
 	}
-
-
-
+	
+	// Check to see if the user wond the game or not...
+//	if()
 
 	Hangman::findChild<QPushButton*>(buttonName)->setEnabled(false);
+
+}
+
+void Hangman::on_quitButton_clicked() {
+	this->close();
+}
+
+void Hangman::on_resetButton_clicked() {
+	labelLetter0->setText("");
+	labelLetter1->setText("");
+	labelLetter2->setText("");
+	labelLetter3->setText("");
+	labelLetter4->setText("");
+	labelLetter5->setText("");
+	beginNewGame();
+	userOne.resetMemberVariables(0, 0);
+
+
 }
