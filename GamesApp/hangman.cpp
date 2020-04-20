@@ -8,7 +8,8 @@ Hangman::Hangman(QWidget* parent)
 {
 	setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 	setupUi(this);
-	QPushButton startButton;
+	updateUI(true);
+//	QPushButton startButton;
 	QPushButton* alphabetButtons[26];
 	for (int counter = 0; counter < 26; ++counter) {
 		QString buttonName = "buttonAlphabet" + QString::number(counter + 1);
@@ -26,6 +27,7 @@ Hangman::~Hangman()
 }
 
 void Hangman::updateUI(bool bGuessingWord) {
+
 	int lengthWord = userOne.getWord().length();
 
 	if (bGuessingWord == false) {
@@ -35,12 +37,17 @@ void Hangman::updateUI(bool bGuessingWord) {
 			letterLines_0->setVisible(true);
 			letterLines_1->setVisible(true);
 			letterLines_2->setVisible(true);
+			letterLines_3->setVisible(false);
+			letterLines_4->setVisible(false);
+			letterLines_5->setVisible(false);
 			break;
 		case 4:
 			letterLines_0->setVisible(true);
 			letterLines_1->setVisible(true);
 			letterLines_2->setVisible(true);
 			letterLines_3->setVisible(true);
+			letterLines_4->setVisible(false);
+			letterLines_5->setVisible(false);
 			break;
 		case 5:
 			letterLines_0->setVisible(true);
@@ -48,6 +55,7 @@ void Hangman::updateUI(bool bGuessingWord) {
 			letterLines_2->setVisible(true);
 			letterLines_3->setVisible(true);
 			letterLines_4->setVisible(true);
+			letterLines_5->setVisible(false);
 			break;
 		case 6:
 			letterLines_0->setVisible(true);
@@ -60,21 +68,44 @@ void Hangman::updateUI(bool bGuessingWord) {
 		}
 	}
 	else {
+		int counter = 1;
+		while (counter <= 26) {
+			QString buttonNames = "buttonAlphabet" + QString::number(counter);
+			Hangman::findChild<QWidget*>(buttonNames)->setEnabled(false);
+			counter++;
+		}
+		letterLines_0->setVisible(false);
+		letterLines_1->setVisible(false);
+		letterLines_2->setVisible(false);
+		letterLines_3->setVisible(false);
+		letterLines_4->setVisible(false);
+		letterLines_5->setVisible(false);
+		revealButton->setEnabled(false);
+		resetButton->setEnabled(false);
+		startButton->setVisible(true);
 
 	}
+
+}
+
+void Hangman::displayWord() {
+	for (int counter3 = 0; counter3 <= userOne.getWord().length()-1; counter3++) {
+		QString wordLetterLabelName = "labelLetter" + QString::number(counter3);
+		Hangman::findChild<QLabel*>(wordLetterLabelName)->setText(QChar::fromLatin1((userOne.getWord().at(counter3))));
+	}
+	endGameLabel->setText("You loss!");
 }
 
 void Hangman::beginNewGame(){
 	userOne.setWord();
-	startButton->setVisible(false);
 	int numLinesCounter = 0;
 	int counter2 = 1;
 	while (numLinesCounter < 34) {
+//	while(counter2 <= 26){
 		//QString lineNames = "line_" + QString::number(numLinesCounter);
 		//Hangman::findChild<QWidget*>(lineNames)->setVisible(false);
 		//numLinesCounter++;
-		//----------
-
+		
 		if (numLinesCounter < 9) {
 			QString lineNames = "line_" + QString::number(numLinesCounter);
 			Hangman::findChild<QWidget*>(lineNames)->setVisible(false);
@@ -91,8 +122,11 @@ void Hangman::beginNewGame(){
 }
 
 void Hangman::on_startButton_clicked() {
-
+	startButton->setVisible(false);
 	beginNewGame();
+	revealButton->setEnabled(true);
+	resetButton->setEnabled(true);
+
 }
 
 void Hangman::letterPressed() {
@@ -101,34 +135,46 @@ void Hangman::letterPressed() {
 	QString buttonName = button->objectName();
 
 	TESTLABEL->setText(valueOnButton);
-	TESTLABEL2->setText(buttonName);
+	//TESTLABEL2->setText(buttonName);
 	QString word = QString::fromStdString(userOne.getWord());
 	TESTLABEL3->setText(word);
+
+
+
+
 
 	//----------EDIT BELOW, MAKE WORK IF THE USER DID NOT GUESS CORRECTLY, 
 	// End of the game, did not guess correctly:
 
 
-	if (userOne.getAmountGuessesWrong() == 14) {
-		endGameLabel->setText("End Game, the word is " + QString::fromStdString(userOne.getWord()));
-	}
-
 	int letterIndex = 0;
-	if (userOne.checkWord(valueOnButton.toStdString(), letterIndex) == false) {
-		// display line based upon how many guesses user gets wrong
-		QString showLine = "line_" + QString::number(userOne.getAmountGuessesWrong());
-		Hangman::findChild<QWidget*>(showLine)->setVisible(true);
+	if (userOne.getAmountGuessesWrong() != 9) {
+		int counter3 = 0;
+		if (userOne.winGame() == true) {
+			endGameLabel->setText("You have won the game!");
+		}
+		else {
+			if (userOne.checkWord(valueOnButton.toStdString(), letterIndex) == false) {
+				// display line based upon how many guesses user gets wrong
+				QString showLine = "line_" + QString::number(userOne.getAmountGuessesWrong()-1);
+				Hangman::findChild<QWidget*>(showLine)->setVisible(true);
+			}
+			else {//if (userOne.checkWord(valueOnButton.toStdString(), letterIndex) == true) {
+				// display letter
+				QString showLine = "labelLetter" + QString::number(letterIndex);
+				Hangman::findChild<QLabel*>(showLine)->setText(valueOnButton);
+			}
+		}
 	}
-	else if(userOne.checkWord(valueOnButton.toStdString(), letterIndex) == true) {
-		// display letter
-		QString showLine = "labelLetter" + QString::number(letterIndex);
-		Hangman::findChild<QLabel*>(showLine)->setText(valueOnButton);
+	else {
+		displayWord();
+		updateUI(false);
+		//endGameLabel->setText("End Game, the word is " + QString::fromStdString(userOne.getWord()));
 	}
-	
-	// Check to see if the user wond the game or not...
-//	if()
-
 	Hangman::findChild<QPushButton*>(buttonName)->setEnabled(false);
+
+	TESTLABEL2->setText(QString::number(userOne.getAmountGuessesWrong()));
+
 
 }
 
@@ -145,6 +191,7 @@ void Hangman::on_resetButton_clicked() {
 	labelLetter5->setText("");
 	beginNewGame();
 	userOne.resetMemberVariables(0, 0);
+	
 
 
 }

@@ -12,11 +12,12 @@ public:
 private:
 	Ui::hangman* ui;
 	void updateUI(bool bGuessingWord);
-
+	void displayWord();
 	void beginNewGame();
 private slots:
 	void on_startButton_clicked();
 	void letterPressed();
 	void on_quitButton_clicked();
 	void on_resetButton_clicked();
+//	void on_revealButton_clicked();
 };

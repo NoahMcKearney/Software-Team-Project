@@ -5,6 +5,7 @@
 #include <random>
 #include <string>
 #include<fstream>
+#include<tuple>
 //#include<fstream>
 
 void CUser::setWord() {
@@ -45,9 +46,9 @@ bool CUser::checkWord(std::string buttonValue, int &letterIndex)
 	for (int index = 0; index < sWord.length(); index++) {
 		
 		if (sWord[index] == buttonValue[0]) {
-			// Displays one character of the word on the screen:
 			letterIndex = index;
-			m_amountLettersGuessed++;
+			m_lettersGuessedCorrectly++;
+			// Guess is correct:
 			return true;
 		}
 		else if (index+1 == sWord.length()) {
@@ -62,17 +63,21 @@ bool CUser::checkWord(std::string buttonValue, int &letterIndex)
 
 }
 
-bool CUser::winLoseGame() {
+bool CUser::winGame() {
 	
-//  if(m_amount)
+	if (m_lettersGuessedCorrectly == (getWord().length())) {
+		return true;
+	}
+	else {
+		return false;
+	}
 
-//	if(m_amountLettersGuessed == )
-	return 0;
 }
 
 void CUser::resetMemberVariables(int wrongGuessCounter, int amountLettersPressed) {
 	m_wrongGuess = wrongGuessCounter;
 	m_amountLettersPressed = amountLettersPressed;
+	m_lettersGuessedCorrectly = 0;
 }
 
 
