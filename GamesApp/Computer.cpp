@@ -16,23 +16,16 @@ std::string Computer::getSymbol()
 {
 	return sSymbol;
 }
-void Computer::computerTurn()
+std::string Computer::getFontColor()
 {
-	/*bool bSpotTaken = false;
-	while (!bSpotTaken)
+	if (sSymbol == "O")
 	{
-		int index = rand() % 8 + 0;
-
-		if (sSymbol == BoardVector[index])
-		{
-			bSpotTaken = true;
-		}
-		else
-		{
-			BoardVector[index] = sSymbol;
-			//ui."nameOfButton"->setEnabled(false);
-		}
-	}*/
+		return "color: Red; background-color: White";
+	}
+	else
+	{
+		return "color: Blue; background-color: White";
+	}
 }
 
 

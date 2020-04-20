@@ -7,7 +7,6 @@
 #include "ui_Tic_Tac_Toe.h"
 #include "Player.h"
 #include "Computer.h"
-#include "gamePlay.h"
 
 const int size = 9;
 
@@ -16,11 +15,11 @@ std::vector<std::string> BoardVector(size);
 int iButtonPressed = 0, iCountComputerIndex = 0;
 Player User("");
 Computer Opponent("");
-GamePlay board("0");
 
 Tic_Tac_Toe::Tic_Tac_Toe(QWidget *parent)
 	: QDialog(parent)
 {
+	setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 	ui.setupUi(this);
 }
 
@@ -29,38 +28,47 @@ void Tic_Tac_Toe::updateUI(int ibutton)
 	switch (ibutton)
 	{
 	case 1:
+		ui.FirstpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.FirstpushButton->setDisabled(true);
 		ui.FirstpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 2:
+		ui.SecondpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.SecondpushButton->setDisabled(true);
 		ui.SecondpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 3:
+		ui.ThirdpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.ThirdpushButton->setDisabled(true);
 		ui.ThirdpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 4:
+		ui.FourthpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.FourthpushButton->setDisabled(true);
 		ui.FourthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 5:
+		ui.FifthpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.FifthpushButton->setDisabled(true);
 		ui.FifthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 6:
+		ui.SixthpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.SixthpushButton->setDisabled(true);
 		ui.SixthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 7:
+		ui.SeventhpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.SeventhpushButton->setDisabled(true);
 		ui.SeventhpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 8:
+		ui.EighthpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.EighthpushButton->setDisabled(true);
 		ui.EighthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
 	case 9:
+		ui.NinthpushButton->setStyleSheet(QString::fromStdString(Opponent.getFontColor()));
 		ui.NinthpushButton->setDisabled(true);
 		ui.NinthpushButton->setText(QString::fromStdString(Opponent.getSymbol()));
 		break;
@@ -84,6 +92,7 @@ void Tic_Tac_Toe::on_OChoicepushbutton_clicked()
 // board buttons
 void Tic_Tac_Toe::on_FirstpushButton_clicked()
 {
+	ui.FirstpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.FirstpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FirstpushButton->setDisabled(true);
 
@@ -95,6 +104,7 @@ void Tic_Tac_Toe::on_FirstpushButton_clicked()
 
 void Tic_Tac_Toe::on_SecondpushButton_clicked()
 {
+	ui.SecondpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.SecondpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SecondpushButton->setDisabled(true);
 
@@ -105,6 +115,7 @@ void Tic_Tac_Toe::on_SecondpushButton_clicked()
 }
 void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 {
+	ui.ThirdpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.ThirdpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.ThirdpushButton->setDisabled(true);
 
@@ -115,6 +126,7 @@ void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 }
 void Tic_Tac_Toe::on_FourthpushButton_clicked()
 {
+	ui.FourthpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.FourthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FourthpushButton->setDisabled(true);
 
@@ -125,6 +137,7 @@ void Tic_Tac_Toe::on_FourthpushButton_clicked()
 }
 void Tic_Tac_Toe::on_FifthpushButton_clicked()
 {
+	ui.FifthpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.FifthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FifthpushButton->setDisabled(true);
 
@@ -135,6 +148,7 @@ void Tic_Tac_Toe::on_FifthpushButton_clicked()
 }
 void Tic_Tac_Toe::on_SixthpushButton_clicked()
 {
+	ui.SixthpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.SixthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SixthpushButton->setDisabled(true);
 
@@ -145,6 +159,7 @@ void Tic_Tac_Toe::on_SixthpushButton_clicked()
 }
 void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 {
+	ui.SeventhpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.SeventhpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SeventhpushButton->setDisabled(true);
 
@@ -155,6 +170,7 @@ void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 }
 void Tic_Tac_Toe::on_EighthpushButton_clicked()
 {
+	ui.EighthpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.EighthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.EighthpushButton->setDisabled(true);
 
@@ -165,6 +181,7 @@ void Tic_Tac_Toe::on_EighthpushButton_clicked()
 }
 void Tic_Tac_Toe::on_NinthpushButton_clicked()
 {
+	ui.NinthpushButton->setStyleSheet(QString::fromStdString(User.getFontColor()));
 	ui.NinthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.NinthpushButton->setDisabled(true);
 
@@ -207,7 +224,6 @@ void Tic_Tac_Toe::computerTurn()
 
 void Tic_Tac_Toe::winnerCheck()
 {
-//	bool bWinner = false;
 	std::string Button1 = BoardVector[0];
 	std::string Button2 = BoardVector[1];
 	std::string Button3 = BoardVector[2];
@@ -217,35 +233,41 @@ void Tic_Tac_Toe::winnerCheck()
 	std::string Button7 = BoardVector[6];
 	std::string Button8 = BoardVector[7];
 	std::string Button9 = BoardVector[8];
-//	std::string winningSymbol;
 	
 	// Top row 
 	if (Button1 == Button2 && Button2 == Button3)
 	{
+		// displays who won
 		if (Button1 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
+			endGame();
 		}
 		else if (Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// middle row
 	else if ((Button4 == Button5 && Button4 == Button6))
 	{
+		// displays who won
 		if (Button4 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
+			endGame();
 		}
 		else if (Button4 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// bottom row
 	else if ((Button7 == Button8 && Button7 == Button9))
 	{
+		// displays who won
 		if (Button7 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
@@ -253,59 +275,73 @@ void Tic_Tac_Toe::winnerCheck()
 		else if (Button7 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// first column
 	else if ((Button1 == Button4 && Button1 == Button7))
 	{
+		// displays who won
 		if (Button1 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
+			endGame();
 		}
 		else if(Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// second column
 	else if ((Button2 == Button5 && Button2 == Button8))
 	{
+		// displays who won
 		if (Button2 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
+			endGame();
 		}
 		else if(Button2 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// third column
 	else if ((Button3 == Button6 && Button3 == Button9))
 	{
+		// displays who won
 		if (Button3 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
+			endGame();
 		}
 		else if (Button3 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// left to right diagonal
 	else if ((Button1 == Button5 && Button1 == Button9))
 	{
+		// displays who won
 		if (Button1 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
+			endGame();
 		}
 		else if (Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
 	// right to left diagonal
 	else if ((Button3 == Button5 && Button3 == Button7))
 	{
+		// displays who won
 		if (Button3 == User.getSymbol())
 		{
 			ui.winningLabel->setText("You are the winner!");
@@ -313,19 +349,33 @@ void Tic_Tac_Toe::winnerCheck()
 		else if (Button3 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
+			endGame();
 		}
 	}
-
-	// displays who won
-/*	if (bWinner == true)
-	{
-		if (winningSymbol == User.getSymbol())
-		{
-			ui.winningLabel->setText("You are the winner!");
-		}
-		else
-		{
-		}
-	}*/
 }
 
+// close and reset vector
+void Tic_Tac_Toe::on_exitButton_clicked()
+{
+	for (int iCounter = 0; iCounter < BoardVector.size(); iCounter++)
+	{
+		BoardVector[iCounter] = "";
+	}
+	iCountComputerIndex = 0;
+	User.setSymbol("");
+	Opponent.setSymbol("");
+	close();
+}
+
+void Tic_Tac_Toe::endGame()
+{
+	ui.FirstpushButton->setDisabled(true);
+	ui.SecondpushButton->setDisabled(true);
+	ui.ThirdpushButton->setDisabled(true);
+	ui.FourthpushButton->setDisabled(true);
+	ui.FifthpushButton->setDisabled(true);
+	ui.SixthpushButton->setDisabled(true);
+	ui.SeventhpushButton->setDisabled(true);
+	ui.EighthpushButton->setDisabled(true);
+	ui.NinthpushButton->setDisabled(true);
+}

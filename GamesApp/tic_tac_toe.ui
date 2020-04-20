@@ -22,6 +22,11 @@
      <height>251</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
@@ -56,6 +61,14 @@
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -85,7 +98,7 @@
    <property name="font">
     <font>
      <family>Tahoma</family>
-     <pointsize>55</pointsize>
+     <pointsize>48</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -125,6 +138,14 @@ color: Blue;</string>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -151,6 +172,14 @@ color: Blue;</string>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -176,6 +205,14 @@ color: Blue;</string>
      <width>81</width>
      <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -204,6 +241,11 @@ color: Blue;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
@@ -219,6 +261,11 @@ color: Blue;</string>
      <width>20</width>
      <height>251</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true"/>
@@ -239,7 +286,7 @@ color: Blue;</string>
    <property name="font">
     <font>
      <family>Tahoma</family>
-     <pointsize>55</pointsize>
+     <pointsize>48</pointsize>
      <weight>75</weight>
      <bold>true</bold>
     </font>
@@ -276,8 +323,18 @@ color: Red;</string>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(255, 255, 255);
+    <string notr="true">
+
+background-color: rgb(255, 255, 255);
 </string>
    </property>
    <property name="text">
@@ -301,6 +358,14 @@ color: Red;</string>
      <width>81</width>
      <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -328,6 +393,14 @@ color: Red;</string>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -354,6 +427,11 @@ color: Red;</string>
      <height>20</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
@@ -369,6 +447,14 @@ color: Red;</string>
      <width>81</width>
      <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
@@ -396,6 +482,14 @@ color: Red;</string>
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>48</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(255, 255, 255);
 </string>
@@ -416,10 +510,10 @@ color: Red;</string>
   <widget class="QLabel" name="winningLabel">
    <property name="geometry">
     <rect>
-     <x>410</x>
-     <y>310</y>
-     <width>121</width>
-     <height>71</height>
+     <x>390</x>
+     <y>300</y>
+     <width>151</width>
+     <height>101</height>
     </rect>
    </property>
    <property name="font">
@@ -429,6 +523,19 @@ color: Red;</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitButton">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>390</y>
+     <width>75</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Exit</string>
    </property>
   </widget>
  </widget>

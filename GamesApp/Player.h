@@ -11,7 +11,7 @@ public:
 	Player(std::string sStartingImage);
 	void setSymbol(std::string sUpdateSymbol);
 	std::string getSymbol();
-	void updateBoard(int iButtonNum);
+	std::string getFontColor();
 };
 
 #endif //TIC_Tac_Toe_PLAYER_H

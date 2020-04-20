@@ -15,10 +15,16 @@ std::string Player::getSymbol()
 {
 	return sSymbol;
 }
-void Player::updateBoard(int iButtonNum)
+std::string Player::getFontColor()
 {
-	//BoardVector[iButtonNum] = sSymbol;
-	//ui."nameOfButton"->setEnabled(false);
+	if (sSymbol == "O")
+	{
+		return "color: Red; background-color: White";
+	}
+	else
+	{
+		return "color: Blue; background-color: White";
+	}
 }
 
 
