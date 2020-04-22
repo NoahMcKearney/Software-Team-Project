@@ -7,13 +7,11 @@
 #include "CUser.h"
 
 void CUser::setWord() {
-	
-	// open a file and read:
-	std::string line;
-	// vector of words from file to choose from:
-	std::vector<std::string> lines;
 
+	std::string line;
+	std::vector<std::string> lines;
 	srand(time(0));
+	// Opens a file and reads it:
 	std::ifstream file("hangman_words.txt");
 
 	int total_lines = 0;
@@ -23,6 +21,7 @@ void CUser::setWord() {
 	}
 
 	int random_number = rand() % total_lines;
+	// updates the m_wordGuess member variable with a random word:
 	m_wordGuess = lines[random_number];
 }
 
@@ -46,19 +45,21 @@ int CUser::getAmountGuessesCorrect() {
 	return m_correctGuess;
 }
 
+// This function checks to see if the letter pressed by the user is in the word:
 std::vector<int> CUser::checkWord(std::string buttonValue) {
+
 	std::string sWord = getWord();
 	std::vector<int> lettersInWordVector;
 	// Empties vector:
 	lettersInWordVector.clear();
 	for (int index = 0; index <= sWord.length(); index++) {
 		if (sWord[index] == buttonValue[0]) {
+			// if letter is found in word, add the index to vector:
 			lettersInWordVector.push_back(index);
 			guessCorrectCounter();
-			//guessCorrect = true;
 		}
 		else if (index == sWord.length()) {
-			// Guess is wrong:
+			// Reached end of the word:
 			return lettersInWordVector;
 		}
 		else {
@@ -67,58 +68,22 @@ std::vector<int> CUser::checkWord(std::string buttonValue) {
 	}
 
 }
-/*bool CUser::checkWord(std::string buttonValue, int &letterIndex1, int &letterIndex2)
-{
-
-	std::string sWord = getWord();
-	for (int index = 0; index < sWord.length(); index++) {
-		if (sWord[index] == buttonValue[0]) {
-			letterIndex1 = index;
-			guessCorrectCounter();
-			// Guess is correct:
-			return true;
-		}
-		else if (index+1 == sWord.length()) {
-			guessWrongCounter();
-			// Guess is wrong:
-			return false;
-		}
-		else {
-			continue;
-		}
-	}
-}
-*/
 
 bool CUser::winGame() {
 	
+	// Checks to see if the user guesses the word correctly:
 	if (getAmountGuessesCorrect() == getWord().length()) {
-
 		return true;
 	}
 	else {
 		return false;
 	}
-
 }
 
+// Resets the game by setting member variables back to zero:
 void CUser::resetMemberVariables(int wrongGuessCounter, int amountLettersPressed) {
+
 	m_wrongGuess = wrongGuessCounter;
 	m_amountLettersPressed = amountLettersPressed;
 	m_correctGuess = 0;
 }
-
-
-// -----CONSIDER DELETING AT THE END----
-/*void CUser::displayHideLetter() {
-	int sizeWord = getWord().length();
-	switch (sizeWord)
-	{
-	case 3:
-		line_15->setVisible(true);
-		line_16->setVisible(true);
-		line_17->setVisible(true);
-		break;
-	}
-}
-*/

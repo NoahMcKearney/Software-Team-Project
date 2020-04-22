@@ -9,19 +9,18 @@ private:
 	int m_amountLettersPressed{ 0 };
 	int m_correctGuess = 0;
 public:
+	// Finds a word from a file randomly:
 	void setWord();
+	// Returns the random word that the user is trying to guess:
 	std::string getWord();
 	void guessWrongCounter();
 	int getAmountGuessesWrong();
 	void guessCorrectCounter();
 	int getAmountGuessesCorrect();
 	std::vector<int> checkWord(std::string buttonValue);
-	//bool checkWord(std::string buttonValue, int &letterIndex);
+	// Decides if the user won the game or not:
 	bool winGame();
 	void resetMemberVariables(int wrongGuessCounter, int amountLettersPressed);
-	// method to show labels and lines of how many
-	// letters in the word
-//	void showLabelsLinesWord();
 };
 
 #endif // HANGMAN_CUSER_H
