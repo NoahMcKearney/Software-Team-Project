@@ -29,7 +29,8 @@ private slots:
 	void updateBoard(int iButtonIndex);
 	void winnerCheck();
 	void on_exitButton_clicked();
-	void endGame();
+	void disableButton();
+	void enableButton();
 
 private:
 	Ui::Tic_Tac_Toe ui;

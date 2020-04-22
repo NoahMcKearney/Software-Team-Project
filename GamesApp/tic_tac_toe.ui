@@ -511,9 +511,9 @@ background-color: rgb(255, 255, 255);
    <property name="geometry">
     <rect>
      <x>390</x>
-     <y>300</y>
+     <y>290</y>
      <width>151</width>
-     <height>101</height>
+     <height>111</height>
     </rect>
    </property>
    <property name="font">
@@ -522,7 +522,13 @@ background-color: rgb(255, 255, 255);
     </font>
    </property>
    <property name="text">
-    <string>TextLabel</string>
+    <string>Begin by picking your symbol!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <widget class="QPushButton" name="exitButton">

@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "Computer.h"
-#include "gamePlay.h"
-//#include "tic_tac_toe.h"
 #include <random>
 
 Computer::Computer(std::string sStartingSymbol)
