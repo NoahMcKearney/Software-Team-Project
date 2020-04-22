@@ -1,10 +1,11 @@
-#include "Games_FinalProject.h"
+#include "stdafx.h"
+#include "GamePicker.h"
 #include <QtWidgets/QApplication>
 
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);
-	Games_FinalProject w;
+	GamePicker w;
 	w.show();
 	return a.exec();
 }
