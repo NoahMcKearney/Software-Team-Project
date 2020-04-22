@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>555</width>
-    <height>430</height>
+    <width>534</width>
+    <height>480</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>30</y>
+     <x>300</x>
+     <y>80</y>
      <width>20</width>
      <height>251</height>
     </rect>
@@ -34,29 +34,11 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>330</y>
-     <width>121</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>13</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Choose X or O: </string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="SecondpushButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>30</y>
+     <x>220</x>
+     <y>80</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -89,8 +71,8 @@
   <widget class="QPushButton" name="XChoicepushbutton">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>310</y>
+     <x>180</x>
+     <y>360</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -132,8 +114,8 @@ color: Blue;</string>
   <widget class="QPushButton" name="EighthpushButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>210</y>
+     <x>220</x>
+     <y>260</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -166,8 +148,8 @@ color: Blue;</string>
   <widget class="QPushButton" name="FourthpushButton">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>120</y>
+     <x>120</x>
+     <y>170</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -200,8 +182,8 @@ color: Blue;</string>
   <widget class="QPushButton" name="NinthpushButton">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>210</y>
+     <x>320</x>
+     <y>260</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -235,8 +217,8 @@ color: Blue;</string>
   <widget class="Line" name="line_5">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>190</y>
+     <x>120</x>
+     <y>240</y>
      <width>281</width>
      <height>20</height>
     </rect>
@@ -256,8 +238,8 @@ color: Blue;</string>
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>30</y>
+     <x>200</x>
+     <y>80</y>
      <width>20</width>
      <height>251</height>
     </rect>
@@ -277,8 +259,8 @@ color: Blue;</string>
   <widget class="QPushButton" name="OChoicepushbutton">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>310</y>
+     <x>270</x>
+     <y>360</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -307,6 +289,9 @@ color: Red;</string>
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
    <property name="autoDefault">
     <bool>true</bool>
    </property>
@@ -317,8 +302,8 @@ color: Red;</string>
   <widget class="QPushButton" name="FirstpushButton">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>30</y>
+     <x>120</x>
+     <y>80</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -353,8 +338,8 @@ background-color: rgb(255, 255, 255);
   <widget class="QPushButton" name="SeventhpushButton">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>210</y>
+     <x>120</x>
+     <y>260</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -387,8 +372,8 @@ background-color: rgb(255, 255, 255);
   <widget class="QPushButton" name="FifthpushButton">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>120</y>
+     <x>220</x>
+     <y>170</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -411,6 +396,9 @@ background-color: rgb(255, 255, 255);
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
    <property name="autoDefault">
     <bool>true</bool>
    </property>
@@ -421,8 +409,8 @@ background-color: rgb(255, 255, 255);
   <widget class="Line" name="line_4">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>100</y>
+     <x>120</x>
+     <y>150</y>
      <width>281</width>
      <height>20</height>
     </rect>
@@ -442,8 +430,8 @@ background-color: rgb(255, 255, 255);
   <widget class="QPushButton" name="ThirdpushButton">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>30</y>
+     <x>320</x>
+     <y>80</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -476,8 +464,8 @@ background-color: rgb(255, 255, 255);
   <widget class="QPushButton" name="SixthpushButton">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>120</y>
+     <x>320</x>
+     <y>170</y>
      <width>81</width>
      <height>71</height>
     </rect>
@@ -510,8 +498,8 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="winningLabel">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>290</y>
+     <x>360</x>
+     <y>340</y>
      <width>151</width>
      <height>111</height>
     </rect>
@@ -522,7 +510,7 @@ background-color: rgb(255, 255, 255);
     </font>
    </property>
    <property name="text">
-    <string>Begin by picking your symbol!</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>
@@ -534,20 +522,73 @@ background-color: rgb(255, 255, 255);
   <widget class="QPushButton" name="exitButton">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>390</y>
-     <width>75</width>
-     <height>24</height>
+     <x>230</x>
+     <y>440</y>
+     <width>71</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Exit</string>
    </property>
   </widget>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>-10</y>
+     <width>211</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>28</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+</string>
+   </property>
+   <property name="text">
+    <string>Tic Tac Toe</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="chooseLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>151</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Choose X or O:</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources>
-  <include location="ResourceTic_Tac_toe.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
