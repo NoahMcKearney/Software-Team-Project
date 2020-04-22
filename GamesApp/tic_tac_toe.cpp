@@ -13,7 +13,6 @@ const int size = 9;
 std::vector<std::string> BoardVector(size);
 
 int iButtonPressed = 0, iCountComputerIndex = 0, iCounterUserIndex = 0;
-bool continueGame = true;
 Player User("");
 Computer Opponent("");
 
@@ -112,12 +111,8 @@ void Tic_Tac_Toe::on_FirstpushButton_clicked()
 
 	iButtonPressed = 1;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 
 void Tic_Tac_Toe::on_SecondpushButton_clicked()
@@ -130,12 +125,8 @@ void Tic_Tac_Toe::on_SecondpushButton_clicked()
 
 	iButtonPressed = 2;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 {
@@ -147,12 +138,8 @@ void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 
 	iButtonPressed = 3;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_FourthpushButton_clicked()
 {
@@ -164,12 +151,8 @@ void Tic_Tac_Toe::on_FourthpushButton_clicked()
 
 	iButtonPressed = 4;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_FifthpushButton_clicked()
 {
@@ -181,12 +164,8 @@ void Tic_Tac_Toe::on_FifthpushButton_clicked()
 
 	iButtonPressed = 5;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_SixthpushButton_clicked()
 {
@@ -198,12 +177,8 @@ void Tic_Tac_Toe::on_SixthpushButton_clicked()
 
 	iButtonPressed = 6;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 {
@@ -215,12 +190,8 @@ void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 
 	iButtonPressed = 7;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_EighthpushButton_clicked()
 {
@@ -232,12 +203,8 @@ void Tic_Tac_Toe::on_EighthpushButton_clicked()
 
 	iButtonPressed = 8;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 void Tic_Tac_Toe::on_NinthpushButton_clicked()
 {
@@ -249,12 +216,8 @@ void Tic_Tac_Toe::on_NinthpushButton_clicked()
 
 	iButtonPressed = 9;
 	updateBoard(iButtonPressed - 1);
-	continueGame = winnerCheck();
-
-	if (continueGame == true)
-	{
-		computerTurn();
-	}
+	computerTurn();
+	winnerCheck();
 }
 
 // update BoardVector with user symbol
@@ -294,7 +257,7 @@ void Tic_Tac_Toe::computerTurn()
 	}
 }
 
-bool Tic_Tac_Toe::winnerCheck()
+void Tic_Tac_Toe::winnerCheck()
 {
 	std::string Button1 = BoardVector[0];
 	std::string Button2 = BoardVector[1];
@@ -314,20 +277,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if (Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// middle row
@@ -338,20 +292,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if (Button4 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// bottom row
@@ -362,20 +307,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if (Button7 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// first column
@@ -386,20 +322,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if(Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// second column
@@ -410,20 +337,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if(Button2 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// third column
@@ -434,20 +352,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if (Button3 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// left to right diagonal
@@ -458,20 +367,11 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if (Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// right to left diagonal
@@ -482,31 +382,17 @@ bool Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
-			// end game
-			return false;
 		}
 		else if (Button3 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
-			// end game
-			return false;
-		}
-		// game continues
-		else
-		{
-			return true;
 		}
 	}
 	// No winner
 	else if (iCountComputerIndex == 4 && iCounterUserIndex == 5)
 	{
 		ui.winningLabel->setText("No winner.");
-	}
-	// game continues
-	else
-	{
-		return true;
 	}
 }
 
@@ -519,7 +405,6 @@ void Tic_Tac_Toe::on_exitButton_clicked()
 	}
 	iCountComputerIndex = 0;
 	iCounterUserIndex = 0;
-	continueGame = true;
 	User.setSymbol("");
 	Opponent.setSymbol("");
 	close();
@@ -550,4 +435,3 @@ void Tic_Tac_Toe::enableButton()
 	ui.EighthpushButton->setDisabled(false);
 	ui.NinthpushButton->setDisabled(false);
 }
-
