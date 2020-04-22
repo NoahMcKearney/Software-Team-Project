@@ -1,12 +1,10 @@
 #include "stdafx.h"
-#include "CUser.h"
 #include <vector>
 #include <iostream>
 #include <random>
 #include <string>
 #include<fstream>
-#include<tuple>
-//#include<fstream>
+#include "CUser.h"
 
 void CUser::setWord() {
 	
@@ -40,14 +38,43 @@ int CUser::getAmountGuessesWrong() {
 	return m_wrongGuess;
 }
 
-bool CUser::checkWord(std::string buttonValue, int &letterIndex)
+void CUser::guessCorrectCounter() {
+	m_correctGuess++;
+}
+
+int CUser::getAmountGuessesCorrect() {
+	return m_correctGuess;
+}
+
+std::vector<int> CUser::checkWord(std::string buttonValue) {
+	std::string sWord = getWord();
+	std::vector<int> lettersInWordVector;
+	// Empties vector:
+	lettersInWordVector.clear();
+	for (int index = 0; index <= sWord.length(); index++) {
+		if (sWord[index] == buttonValue[0]) {
+			lettersInWordVector.push_back(index);
+			guessCorrectCounter();
+			//guessCorrect = true;
+		}
+		else if (index == sWord.length()) {
+			// Guess is wrong:
+			return lettersInWordVector;
+		}
+		else {
+			continue;
+		}
+	}
+
+}
+/*bool CUser::checkWord(std::string buttonValue, int &letterIndex1, int &letterIndex2)
 {
+
 	std::string sWord = getWord();
 	for (int index = 0; index < sWord.length(); index++) {
-		
 		if (sWord[index] == buttonValue[0]) {
-			letterIndex = index;
-			m_lettersGuessedCorrectly++;
+			letterIndex1 = index;
+			guessCorrectCounter();
 			// Guess is correct:
 			return true;
 		}
@@ -60,12 +87,13 @@ bool CUser::checkWord(std::string buttonValue, int &letterIndex)
 			continue;
 		}
 	}
-
 }
+*/
 
 bool CUser::winGame() {
 	
-	if (m_lettersGuessedCorrectly == (getWord().length())) {
+	if (getAmountGuessesCorrect() == getWord().length()) {
+
 		return true;
 	}
 	else {
@@ -77,7 +105,7 @@ bool CUser::winGame() {
 void CUser::resetMemberVariables(int wrongGuessCounter, int amountLettersPressed) {
 	m_wrongGuess = wrongGuessCounter;
 	m_amountLettersPressed = amountLettersPressed;
-	m_lettersGuessedCorrectly = 0;
+	m_correctGuess = 0;
 }
 
 
