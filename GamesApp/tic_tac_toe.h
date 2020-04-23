@@ -35,4 +35,3 @@ private slots:
 private:
 	Ui::Tic_Tac_Toe ui;
 };
-

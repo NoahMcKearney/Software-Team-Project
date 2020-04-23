@@ -21,7 +21,7 @@ Tic_Tac_Toe::Tic_Tac_Toe(QWidget *parent)
 {
 	setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 	ui.setupUi(this);
-	// disables buttons
+	// disables board's buttons
 	disableButton();
 }
 
@@ -109,6 +109,8 @@ void Tic_Tac_Toe::on_FirstpushButton_clicked()
 	ui.FirstpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FirstpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 1;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -123,6 +125,8 @@ void Tic_Tac_Toe::on_SecondpushButton_clicked()
 	ui.SecondpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SecondpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 2;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -136,6 +140,8 @@ void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 	ui.ThirdpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.ThirdpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 3;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -149,6 +155,8 @@ void Tic_Tac_Toe::on_FourthpushButton_clicked()
 	ui.FourthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FourthpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 4;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -162,6 +170,8 @@ void Tic_Tac_Toe::on_FifthpushButton_clicked()
 	ui.FifthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FifthpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 5;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -175,6 +185,8 @@ void Tic_Tac_Toe::on_SixthpushButton_clicked()
 	ui.SixthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SixthpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 6;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -188,6 +200,8 @@ void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 	ui.SeventhpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SeventhpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 7;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -201,6 +215,8 @@ void Tic_Tac_Toe::on_EighthpushButton_clicked()
 	ui.EighthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.EighthpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 8;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -214,6 +230,8 @@ void Tic_Tac_Toe::on_NinthpushButton_clicked()
 	ui.NinthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.NinthpushButton->setDisabled(true);
 
+
+	winnerCheck();
 	iButtonPressed = 9;
 	updateBoard(iButtonPressed - 1);
 	computerTurn();
@@ -233,7 +251,7 @@ void Tic_Tac_Toe::computerTurn()
 
 	while (!bSpotTaken)
 	{
-		int index = rand() % 9 + 0, boardFill = 1;
+		int index = rand() % 9 + 0;
 
 		// no more spots left for computer 
 		if (iCountComputerIndex == 4)
@@ -410,6 +428,7 @@ void Tic_Tac_Toe::on_exitButton_clicked()
 	close();
 }
 
+// board's button disable
 void Tic_Tac_Toe::disableButton()
 {
 	ui.FirstpushButton->setDisabled(true);
@@ -423,6 +442,7 @@ void Tic_Tac_Toe::disableButton()
 	ui.NinthpushButton->setDisabled(true);
 }
 
+// board's button enable
 void Tic_Tac_Toe::enableButton()
 {
 	ui.FirstpushButton->setDisabled(false);

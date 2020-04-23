@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Player.h"
 #include <vector>
-//#include "tic_tac_toe.h"
 
 Player::Player(std::string sStartingSymbol)
 {
