@@ -14,7 +14,7 @@ private slots:
 	void on_XChoicepushbutton_clicked();
 	void on_OChoicepushbutton_clicked();
 
-	// board button
+	// board's buttons
 	void on_FirstpushButton_clicked();
 	void on_SecondpushButton_clicked();
 	void on_ThirdpushButton_clicked();
