@@ -32,6 +32,8 @@ private slots:
 	void disableButton();
 	void enableButton();
 
+	void on_resetButton_clicked();
+
 private:
 	Ui::Tic_Tac_Toe ui;
 };

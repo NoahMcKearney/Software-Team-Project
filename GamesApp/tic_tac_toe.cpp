@@ -1323,6 +1323,38 @@ bool Tic_Tac_Toe::winnerCheck()
 	return false;
 }
 
+// reset game
+void Tic_Tac_Toe::on_resetButton_clicked()
+{
+	// reset vector
+	for (int iCounter = 0; iCounter < BoardVector.size(); iCounter++)
+	{
+		BoardVector[iCounter] = "";
+	}
+	iCountComputerIndex = 0;
+	iCounterUserIndex = 0;
+	User.setSymbol("");
+	Opponent.setSymbol("");
+	ui.XChoicepushbutton->setDisabled(false);
+	ui.OChoicepushbutton->setDisabled(false);
+	ui.XChoicepushbutton->show();
+	ui.OChoicepushbutton->show();
+
+	// reset buttons with no text
+	ui.FirstpushButton->setText("");
+	ui.SecondpushButton->setText("");
+	ui.ThirdpushButton->setText("");
+	ui.FourthpushButton->setText("");
+	ui.FifthpushButton->setText("");
+	ui.SixthpushButton->setText("");
+	ui.SeventhpushButton->setText("");
+	ui.EighthpushButton->setText("");
+	ui.NinthpushButton->setText("");
+
+	ui.chooseLabel->setText("Choose X or O.");
+	ui.winningLabel->setText("");
+}
+
 // exit form and reset vector
 void Tic_Tac_Toe::on_exitButton_clicked()
 {
