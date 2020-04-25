@@ -27,7 +27,7 @@ private slots:
 	void updateUI(int ibutton);
 	void computerTurn();
 	void updateBoard(int iButtonIndex);
-	void winnerCheck();
+	bool winnerCheck();
 	void on_exitButton_clicked();
 	void disableButton();
 	void enableButton();

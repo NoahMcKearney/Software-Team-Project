@@ -13,6 +13,7 @@ const int size = 9;
 std::vector<std::string> BoardVector(size);
 
 int iButtonPressed = 0, iCountComputerIndex = 0, iCounterUserIndex = 0;
+bool gameEnds = false;
 Player User("");
 Computer Opponent("");
 
@@ -109,12 +110,15 @@ void Tic_Tac_Toe::on_FirstpushButton_clicked()
 	ui.FirstpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FirstpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 1;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 
 void Tic_Tac_Toe::on_SecondpushButton_clicked()
@@ -125,12 +129,15 @@ void Tic_Tac_Toe::on_SecondpushButton_clicked()
 	ui.SecondpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SecondpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 2;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 {
@@ -140,12 +147,15 @@ void Tic_Tac_Toe::on_ThirdpushButton_clicked()
 	ui.ThirdpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.ThirdpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 3;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_FourthpushButton_clicked()
 {
@@ -155,12 +165,15 @@ void Tic_Tac_Toe::on_FourthpushButton_clicked()
 	ui.FourthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FourthpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 4;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_FifthpushButton_clicked()
 {
@@ -170,12 +183,15 @@ void Tic_Tac_Toe::on_FifthpushButton_clicked()
 	ui.FifthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.FifthpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 5;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_SixthpushButton_clicked()
 {
@@ -185,12 +201,15 @@ void Tic_Tac_Toe::on_SixthpushButton_clicked()
 	ui.SixthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SixthpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 6;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 {
@@ -200,12 +219,15 @@ void Tic_Tac_Toe::on_SeventhpushButton_clicked()
 	ui.SeventhpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.SeventhpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 7;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_EighthpushButton_clicked()
 {
@@ -215,12 +237,15 @@ void Tic_Tac_Toe::on_EighthpushButton_clicked()
 	ui.EighthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.EighthpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 8;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 void Tic_Tac_Toe::on_NinthpushButton_clicked()
 {
@@ -230,12 +255,15 @@ void Tic_Tac_Toe::on_NinthpushButton_clicked()
 	ui.NinthpushButton->setText(QString::fromStdString(User.getSymbol()));
 	ui.NinthpushButton->setDisabled(true);
 
-
-	winnerCheck();
 	iButtonPressed = 9;
 	updateBoard(iButtonPressed - 1);
-	computerTurn();
-	winnerCheck();
+	gameEnds = winnerCheck();
+	// Game continues:
+	if (gameEnds == false)
+	{
+		computerTurn();
+		winnerCheck();
+	}
 }
 
 // update BoardVector with user symbol
@@ -245,38 +273,869 @@ void Tic_Tac_Toe::updateBoard(int iButtonIndex)
 	iCounterUserIndex++;
 }
 
+
+// Switch turns
 void Tic_Tac_Toe::computerTurn()
 {
+	std::string Button1 = BoardVector[0];
+	std::string Button2 = BoardVector[1];
+	std::string Button3 = BoardVector[2];
+	std::string Button4 = BoardVector[3];
+	std::string Button5 = BoardVector[4];
+	std::string Button6 = BoardVector[5];
+	std::string Button7 = BoardVector[6];
+	std::string Button8 = BoardVector[7];
+	std::string Button9 = BoardVector[8];
+
 	bool bSpotTaken = false;
 
 	while (!bSpotTaken)
-	{
-		int index = rand() % 9 + 0;
-
-		// no more spots left for computer 
+	{		
+		// if true, then computer stops playing
 		if (iCountComputerIndex == 4)
 		{
 			bSpotTaken = true;
 		}
-		// checks BoardVector to see if a symbol is in index from random generator
-		else if ((Opponent.getSymbol() == BoardVector[index]) || (User.getSymbol() == BoardVector[index]))
+
+		// Computer checks for best move based on computer's symbol
+		// Top row 
+		else if (Button1 == Opponent.getSymbol() && Button2 == Opponent.getSymbol())
 		{
-			bSpotTaken = false;
+			// check button 3, index of 2:
+			if ((Opponent.getSymbol() == BoardVector[2]) || (User.getSymbol() == BoardVector[2]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 3 
+				updateUI(3);
+				BoardVector[2] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
 		}
-		// if BoardVector with certain index is empty
-		else 
+		// Top row 
+		else if ((Button1 == Opponent.getSymbol() && Button3 == Opponent.getSymbol()))
 		{
-			BoardVector[index] = Opponent.getSymbol();
-			// add computer symbol to button on board
-			updateUI(index+1);
-			bSpotTaken = true; 
+			// check button 2, index of 1:
+			if ((Opponent.getSymbol() == BoardVector[1]) || (User.getSymbol() == BoardVector[1]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 2 
+				updateUI(2);
+				BoardVector[1] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// Top row 
+		else if (Button2 == Opponent.getSymbol() && Button3 == Opponent.getSymbol())
+		{
+			// check button 1, index of 0:
+			if ((Opponent.getSymbol() == BoardVector[0]) || (User.getSymbol() == BoardVector[0]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 1 
+				updateUI(1);
+				BoardVector[0] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// Middle row
+		else if (Button4 == Opponent.getSymbol() && Button5 == Opponent.getSymbol())
+		{
+			// check button 6, index of 5:
+			if ((Opponent.getSymbol() == BoardVector[5]) || (User.getSymbol() == BoardVector[5]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 6 
+				updateUI(6);
+				BoardVector[5] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// Middle row
+		else if (Button4 == Opponent.getSymbol() && Button6 == Opponent.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5 
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+
+		}
+		// Middle row 
+		else if (Button5 == Opponent.getSymbol() && Button6 == Opponent.getSymbol())
+		{
+			// check button 4, index of 3:
+			if ((Opponent.getSymbol() == BoardVector[3]) || (User.getSymbol() == BoardVector[3]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 4
+				updateUI(4);
+				BoardVector[3] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// bottom row
+		else if (Button7 == Opponent.getSymbol() && Button8 == Opponent.getSymbol())
+		{
+			// check button 9, index of 8:
+			if ((Opponent.getSymbol() == BoardVector[8]) || (User.getSymbol() == BoardVector[8]))
+			{
+				bSpotTaken = false;
+			}
+			else
+				// places computer's symbol on button 9 
+				updateUI(9);
+			BoardVector[8] = Opponent.getSymbol();
+			bSpotTaken = true;
 			iCountComputerIndex++;
+		}
+		// bottom row
+		else if (Button8 == Opponent.getSymbol() && Button9 == Opponent.getSymbol())
+		{
+			// check button 7, index of 6:
+			if ((Opponent.getSymbol() == BoardVector[6]) || (User.getSymbol() == BoardVector[6]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 7 
+				updateUI(7);
+				BoardVector[6] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// bottom row 
+		else if (Button7 == Opponent.getSymbol() && Button9 == Opponent.getSymbol())
+		{
+			// check button 8, index of 7:
+			if ((Opponent.getSymbol() == BoardVector[7]) || (User.getSymbol() == BoardVector[7]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 8
+				updateUI(8);
+				BoardVector[7] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// first column
+		else if (Button1 == Opponent.getSymbol() && Button4 == Opponent.getSymbol())
+		{
+			// check button 7, index of 6:
+			if ((Opponent.getSymbol() == BoardVector[6]) || (User.getSymbol() == BoardVector[6]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 7
+				updateUI(7);
+				BoardVector[6] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// first column
+		else if (Button4 == Opponent.getSymbol() && Button7 == Opponent.getSymbol())
+		{
+			// check button 1, index of 0:
+			if ((Opponent.getSymbol() == BoardVector[0]) || (User.getSymbol() == BoardVector[0]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 1
+				updateUI(1);
+				BoardVector[0] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// first column
+		else if (Button1 == Opponent.getSymbol() && Button7 == Opponent.getSymbol())
+		{
+			// check button 4, index of 3:
+			if ((Opponent.getSymbol() == BoardVector[3]) || (User.getSymbol() == BoardVector[3]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 4
+				updateUI(4);
+				BoardVector[3] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// second column
+		else if (Button2 == Opponent.getSymbol() && Button5 == Opponent.getSymbol())
+		{
+			// check button 8, index of 7:
+			if ((Opponent.getSymbol() == BoardVector[7]) || (User.getSymbol() == BoardVector[7]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 8
+				updateUI(8);
+				BoardVector[7] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// second column
+		else if (Button5 == Opponent.getSymbol() && Button8 == Opponent.getSymbol())
+		{
+			// check button 2, index of 1:
+			if ((Opponent.getSymbol() == BoardVector[1]) || (User.getSymbol() == BoardVector[1]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 2 
+				updateUI(2);
+				BoardVector[1] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// second column
+		else if (Button2 == Opponent.getSymbol() && Button8 == Opponent.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// third column
+		else if (Button3 == Opponent.getSymbol() && Button6 == Opponent.getSymbol())
+		{
+			// check button 9, index of 8:
+			if ((Opponent.getSymbol() == BoardVector[8]) || (User.getSymbol() == BoardVector[8]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 9 
+				updateUI(9);
+				BoardVector[8] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// third column
+		else if (Button6 == Opponent.getSymbol() && Button9 == Opponent.getSymbol())
+		{
+			// check button 3, index of 2:
+			if ((Opponent.getSymbol() == BoardVector[2]) || (User.getSymbol() == BoardVector[2]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 3 
+				updateUI(3);
+				BoardVector[2] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// third column
+		else if (Button3 == Opponent.getSymbol() && Button9 == Opponent.getSymbol())
+		{
+			// check button 6, index of 5:
+			if ((Opponent.getSymbol() == BoardVector[5]) || (User.getSymbol() == BoardVector[5]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 6
+				updateUI(6);
+				BoardVector[5] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// left to right diagonal
+		else if (Button1 == Opponent.getSymbol() && Button5 == Opponent.getSymbol())
+		{
+			// check button 9, index of 8:
+			if ((Opponent.getSymbol() == BoardVector[8]) || (User.getSymbol() == BoardVector[8]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 9
+				updateUI(9);
+				BoardVector[8] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button5 == Opponent.getSymbol() && Button9 == Opponent.getSymbol())
+		{
+			// check button 1, index of 0:
+			if ((Opponent.getSymbol() == BoardVector[0]) || (User.getSymbol() == BoardVector[0]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 1
+				updateUI(1);
+				BoardVector[0] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button1 == Opponent.getSymbol() && Button9 == Opponent.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// right to left diagonal
+		else if (Button3 == Opponent.getSymbol() && Button5 == Opponent.getSymbol())
+		{
+			// check button 7, index of 6:
+			if ((Opponent.getSymbol() == BoardVector[6]) || (User.getSymbol() == BoardVector[6]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 7
+				updateUI(7);
+				BoardVector[6] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button5 == Opponent.getSymbol() && Button7 == Opponent.getSymbol())
+		{
+			// check button 3, index of 2:
+			if ((Opponent.getSymbol() == BoardVector[2]) || (User.getSymbol() == BoardVector[2]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 3 
+				updateUI(3);
+				BoardVector[2] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button3 == Opponent.getSymbol() && Button7 == Opponent.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5 
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// check to see if can intersect user
+		// Top row 
+		else if (Button1 == User.getSymbol() && Button2 == User.getSymbol())
+		{
+			// check button 3, index of 2:
+			if ((Opponent.getSymbol() == BoardVector[2]) || (User.getSymbol() == BoardVector[2]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 3 
+				updateUI(3);
+				BoardVector[2] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// Top row 
+		else if ((Button1 == User.getSymbol() && Button3 == User.getSymbol()))
+		{
+			// check button 2, index of 1:
+			if ((Opponent.getSymbol() == BoardVector[1]) || (User.getSymbol() == BoardVector[1]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 2 
+				updateUI(2);
+				BoardVector[1] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// Top row 
+		else if (Button2 == User.getSymbol() && Button3 == User.getSymbol())
+		{
+			// check button 1, index of 0:
+			if ((Opponent.getSymbol() == BoardVector[0]) || (User.getSymbol() == BoardVector[0]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 1 
+				updateUI(1);
+				BoardVector[0] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// Middle row
+		else if (Button4 == User.getSymbol() && Button5 == User.getSymbol())
+		{
+			// check button 6, index of 5:
+			if ((Opponent.getSymbol() == BoardVector[5]) || (User.getSymbol() == BoardVector[5]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 6 
+				updateUI(6);
+				BoardVector[5] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// Middle row
+		else if (Button4 == User.getSymbol() && Button6 == User.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5 
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// Middle row 
+		else if (Button5 == User.getSymbol() && Button6 == User.getSymbol())
+		{
+			// check button 4, index of 3:
+			if ((Opponent.getSymbol() == BoardVector[3]) || (User.getSymbol() == BoardVector[3]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 4
+				updateUI(4);
+				BoardVector[3] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// bottom row
+		else if (Button7 == User.getSymbol() && Button8 == User.getSymbol())
+		{
+			// check button 9, index of 8:
+			if ((Opponent.getSymbol() == BoardVector[8]) || (User.getSymbol() == BoardVector[8]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 9 
+				updateUI(9);
+				BoardVector[8] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// bottom row
+		else if (Button8 == User.getSymbol() && Button9 == User.getSymbol())
+		{
+			// check button 7, index of 6:
+			if ((Opponent.getSymbol() == BoardVector[6]) || (User.getSymbol() == BoardVector[6]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 7 
+				updateUI(7);
+				BoardVector[6] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// bottom row 
+		else if (Button7 == User.getSymbol() && Button9 == User.getSymbol())
+		{
+			// check button 8, index of 7:
+			if ((Opponent.getSymbol() == BoardVector[7]) || (User.getSymbol() == BoardVector[7]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 8 
+				updateUI(8);
+				BoardVector[7] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// first column
+		else if (Button1 == User.getSymbol() && Button4 == User.getSymbol())
+		{
+			// check button 7, index of 6:
+			if ((Opponent.getSymbol() == BoardVector[6]) || (User.getSymbol() == BoardVector[6]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 7 
+				updateUI(7);
+				BoardVector[6] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// first column
+		else if (Button4 == User.getSymbol() && Button7 == User.getSymbol())
+		{
+			// check button 1, index of 0:
+			if ((Opponent.getSymbol() == BoardVector[0]) || (User.getSymbol() == BoardVector[0]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 1
+				updateUI(1);
+				BoardVector[0] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// first column
+		else if (Button1 == User.getSymbol() && Button7 == User.getSymbol())
+		{
+			// check button 4, index of 3:
+			if ((Opponent.getSymbol() == BoardVector[3]) || (User.getSymbol() == BoardVector[3]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 4
+				updateUI(4);
+				BoardVector[3] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// second column
+		else if (Button2 == User.getSymbol() && Button5 == User.getSymbol())
+		{
+			// check button 8, index of 7:
+			if ((Opponent.getSymbol() == BoardVector[7]) || (User.getSymbol() == BoardVector[7]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 8 
+				updateUI(8);
+				BoardVector[7] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// second column
+		else if (Button5 == User.getSymbol() && Button8 == User.getSymbol())
+			{
+			// check button 2, index of 1:
+			if ((Opponent.getSymbol() == BoardVector[1]) || (User.getSymbol() == BoardVector[1]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 2 
+				updateUI(2);
+				BoardVector[1] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// second column
+		else if (Button2 == User.getSymbol() && Button8 == User.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// third column
+		else if (Button3 == User.getSymbol() && Button6 == User.getSymbol())
+		{
+			// check button 9, index of 8:
+			if ((Opponent.getSymbol() == BoardVector[8]) || (User.getSymbol() == BoardVector[8]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 9
+				updateUI(9);
+				BoardVector[8] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// third column
+		else if (Button6 == User.getSymbol() && Button9 == User.getSymbol())
+		{
+			// check button 3, index of 2:
+			if ((Opponent.getSymbol() == BoardVector[2]) || (User.getSymbol() == BoardVector[2]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 3 
+				updateUI(3);
+				BoardVector[2] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// third column
+		else if (Button3 == User.getSymbol() && Button9 == User.getSymbol())
+		{
+			// check button 6, index of 5:
+			if ((Opponent.getSymbol() == BoardVector[5]) || (User.getSymbol() == BoardVector[5]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 6 
+				updateUI(6);
+				BoardVector[5] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// left to right diagonal
+		else if (Button1 == User.getSymbol() && Button5 == User.getSymbol())
+		{
+			// check button 9, index of 8:
+			if ((Opponent.getSymbol() == BoardVector[8]) || (User.getSymbol() == BoardVector[8]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 9 
+				updateUI(9);
+				BoardVector[8] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button5 == User.getSymbol() && Button9 == User.getSymbol())
+		{
+			// check button 1, index of 0:
+			if ((Opponent.getSymbol() == BoardVector[0]) || (User.getSymbol() == BoardVector[0]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 1
+				updateUI(1);
+				BoardVector[0] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button1 == User.getSymbol() && Button9 == User.getSymbol())
+		{
+			// check button 5, index of 4:
+			if ((Opponent.getSymbol() == BoardVector[4]) || (User.getSymbol() == BoardVector[4]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 5 
+				updateUI(5);
+				BoardVector[4] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		// right to left diagonal
+		else if (Button3 == User.getSymbol() && Button5 == User.getSymbol())
+		{
+			// check button 7, index of 6:
+			if ((Opponent.getSymbol() == BoardVector[6]) || (User.getSymbol() == BoardVector[6]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 7
+				updateUI(7);
+				BoardVector[6] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+		// left to right diagonal
+		else if (Button5 == User.getSymbol() && Button7 == User.getSymbol())
+		{
+			// check button 3, index of 2:
+			if ((Opponent.getSymbol() == BoardVector[2]) || (User.getSymbol() == BoardVector[2]))
+			{
+				bSpotTaken = false;
+			}
+			else
+			{
+				// places computer's symbol on button 3 
+				updateUI(3);
+				BoardVector[2] = Opponent.getSymbol();
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
+		}
+
+		if (bSpotTaken == false)
+		{
+			int index = rand() % 9 + 0;
+			if ((Opponent.getSymbol() == BoardVector[index]) || (User.getSymbol() == BoardVector[index]))
+			{
+				bSpotTaken = false;
+			}
+			// if BoardVector with certain index is empty
+			else if ((Opponent.getSymbol() != BoardVector[index]) || (User.getSymbol() != BoardVector[index]))
+			{
+				BoardVector[index] = Opponent.getSymbol();
+				// add computer symbol to button on board
+				updateUI(index + 1);
+				bSpotTaken = true;
+				iCountComputerIndex++;
+			}
 		}
 	}
 }
 
-void Tic_Tac_Toe::winnerCheck()
+bool Tic_Tac_Toe::winnerCheck()
 {
+	// board's indexes equal to buttons' names
 	std::string Button1 = BoardVector[0];
 	std::string Button2 = BoardVector[1];
 	std::string Button3 = BoardVector[2];
@@ -295,11 +1154,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if (Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// middle row
@@ -310,11 +1171,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if (Button4 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// bottom row
@@ -325,11 +1188,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if (Button7 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// first column
@@ -340,11 +1205,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if(Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// second column
@@ -355,11 +1222,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if(Button2 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// third column
@@ -370,11 +1239,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if (Button3 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// left to right diagonal
@@ -385,11 +1256,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if (Button1 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// right to left diagonal
@@ -400,11 +1273,13 @@ void Tic_Tac_Toe::winnerCheck()
 		{
 			ui.winningLabel->setText("You are the winner!");
 			disableButton();
+			return true;
 		}
 		else if (Button3 == Opponent.getSymbol())
 		{
 			ui.winningLabel->setText("The computer is the winner.");
 			disableButton();
+			return true;
 		}
 	}
 	// No winner
@@ -412,6 +1287,7 @@ void Tic_Tac_Toe::winnerCheck()
 	{
 		ui.winningLabel->setText("No winner.");
 	}
+	return false;
 }
 
 // close and reset vector

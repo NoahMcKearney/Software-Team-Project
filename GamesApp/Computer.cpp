@@ -2,6 +2,16 @@
 #include "Computer.h"
 #include <random>
 
+
+
+
+#include "tic_tac_toe.h"
+#include "ui_Tic_Tac_Toe.h"
+
+
+
+
+
 Computer::Computer(std::string sStartingSymbol)
 {
 	sSymbol = sStartingSymbol;
@@ -25,5 +35,3 @@ std::string Computer::getFontColor()
 		return "color: Blue; background-color: White";
 	}
 }
-
-
