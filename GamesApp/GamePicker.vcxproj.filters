@@ -7,12 +7,21 @@
     <ClCompile Include="tic_tac_toe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Computer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="GamePicker.rc" />
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Computer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="GamePicker.h" />
@@ -45,5 +54,8 @@
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
       <ParseFiles>true</ParseFiles>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GamePicker.ico" />
   </ItemGroup>
 </Project>
