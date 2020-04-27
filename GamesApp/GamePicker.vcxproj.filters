@@ -2,30 +2,35 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="GamePicker.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="tic_tac_toe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Computer.cpp">
+    <ClCompile Include="hangman.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="tic_tac_toe_game.cpp">
+    <ClCompile Include="CUser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Computer.h">
+    <ClInclude Include="CUser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="GamePicker.rc" />
+  </ItemGroup>
+  <ItemGroup>
     <QtMoc Include="GamePicker.h" />
-    <QtMoc Include="tic_tac_toe_game.h">
+    <QtMoc Include="tic_tac_toe.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="hangman.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
@@ -35,6 +40,9 @@
   <ItemGroup>
     <QtUic Include="GamePicker.ui" />
     <QtUic Include="tic_tac_toe.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="hangman.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
@@ -56,6 +64,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <None Include="GamePicker.h.orig" />
+  </ItemGroup>
+  <ItemGroup>
     <Image Include="GamePicker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="hangman_words.txt" />
   </ItemGroup>
 </Project>

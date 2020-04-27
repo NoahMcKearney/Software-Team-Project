@@ -65,6 +65,19 @@
     <string>Quit</string>
    </property>
   </widget>
+  <widget class="QPushButton" name="hangmanButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>10</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Hangman</string>
+   </property>
+  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
