@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>475</width>
-    <height>204</height>
+    <width>469</width>
+    <height>191</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,57 +26,146 @@
     <string/>
    </property>
   </widget>
-  <widget class="QPushButton" name="ticTacToeButton">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Tic-Tac-Toe</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="memoryButton">
-   <property name="geometry">
-    <rect>
-     <x>100</x>
-     <y>10</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Memory</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="quitButton">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>60</y>
+     <x>190</x>
+     <y>130</y>
      <width>75</width>
-     <height>23</height>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Tahoma</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+	background-color: #ffffff;
+	padding: 8px;
+}</string>
    </property>
    <property name="text">
     <string>Quit</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="hangmanButton">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>210</x>
-     <y>10</y>
-     <width>75</width>
-     <height>23</height>
+     <x>170</x>
+     <y>20</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Hangman</string>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
+   <property name="text">
+    <string>Pick a Game!</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>418</width>
+     <height>58</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="ticTacToeButton">
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #ffffff;
+	padding: 8px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Tic-Tac-Toe</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="hangmanButton">
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #ffffff;
+	padding: 8px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Hangman</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="memoryButton">
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+	background-color: #ffffff;
+	padding: 8px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Rock, Paper, 
+Scissors</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

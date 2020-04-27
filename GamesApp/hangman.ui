@@ -1485,11 +1485,16 @@ QPushButton:pressed {
    </property>
    <property name="font">
     <font>
-     <pointsize>14</pointsize>
+     <pointsize>16</pointsize>
     </font>
    </property>
    <property name="layoutDirection">
     <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(9, 179, 0)
+
+</string>
    </property>
    <property name="text">
     <string/>
