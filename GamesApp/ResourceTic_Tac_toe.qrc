@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="XandOImage">
-    <file>O.jpg</file>
-    <file>X.jpg</file>
-  </qresource>
-</RCC>

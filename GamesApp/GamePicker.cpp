@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GamePicker.h"
-#include "tic_tac_toe.h"
+#include "tic_tac_toe_game.h"
 
 GamePicker::GamePicker(QWidget *parent)
 	: QWidget(parent)

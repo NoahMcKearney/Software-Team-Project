@@ -3,7 +3,7 @@
 #include <QtGui>
 
 #include "stdafx.h"
-#include "tic_tac_toe.h"
+#include "tic_tac_toe_game.h"
 #include "ui_Tic_Tac_Toe.h"
 #include "Player.h"
 #include "Computer.h"
