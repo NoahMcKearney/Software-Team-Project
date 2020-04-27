@@ -94,7 +94,7 @@
   <ItemGroup>
     <ClCompile Include="CUser.cpp" />
     <ClCompile Include="GamePicker.cpp" />
-    <ClCompile Include="hangman.cpp" />
+    <ClCompile Include="hangmanGameplay.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

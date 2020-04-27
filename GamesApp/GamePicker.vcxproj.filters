@@ -6,13 +6,13 @@
     <ClCompile Include="tic_tac_toe.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="hangman.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CUser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hangmanGameplay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
