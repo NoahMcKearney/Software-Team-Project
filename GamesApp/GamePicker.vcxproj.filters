@@ -4,13 +4,13 @@
     <ClCompile Include="GamePicker.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="tic_tac_toe.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Computer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tic_tac_toe_game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -25,7 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="GamePicker.h" />
-    <QtMoc Include="tic_tac_toe.h">
+    <QtMoc Include="tic_tac_toe_game.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
