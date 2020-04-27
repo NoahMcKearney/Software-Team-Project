@@ -92,25 +92,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CUser.cpp" />
     <ClCompile Include="GamePicker.cpp" />
+    <ClCompile Include="hangman.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="tic_tac_toe.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="tic_tac_toe.h" />
     <QtMoc Include="GamePicker.h" />
+    <QtMoc Include="hangman.h" />
+    <ClInclude Include="CUser.h" />
     <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="GamePicker.ui" />
+    <QtUic Include="hangman.ui" />
+    <QtUic Include="tic_tac_toe.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="GamePicker.qrc" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="GamePicker.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GamePicker.h.orig" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="GamePicker.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="hangman_words.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
