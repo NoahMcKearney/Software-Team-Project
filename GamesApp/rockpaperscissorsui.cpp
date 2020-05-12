@@ -8,7 +8,6 @@ rockPaperScissorsUI::rockPaperScissorsUI(QWidget *parent)
 	: QDialog(parent)
 {
 	setupUi(this);
-	updateUI();
 }
 
 // Destructor:
@@ -34,8 +33,12 @@ void rockPaperScissorsUI::on_rockButton_clicked() { //user clicked the rock butt
 
     int computerPlay = (qrand() % 3) + 1;
 
-    //1 is for Rock; 2 is for Paper; 3 is for Scissors
+    //clears text from labels
+    rocklabel->setText("");
+    paperlabel->setText("");
+    scissorlabel->setText("");
 
+    //1 is for Rock; 2 is for Paper; 3 is for Scissors
     switch (computerPlay) {
     case 1:
         //this is a tie
@@ -57,6 +60,7 @@ void rockPaperScissorsUI::on_rockButton_clicked() { //user clicked the rock butt
         break;
 
     }
+    updateUI();
 }
 
 void rockPaperScissorsUI::on_paperButton_clicked() {//user clicked the paper button
@@ -64,8 +68,13 @@ void rockPaperScissorsUI::on_paperButton_clicked() {//user clicked the paper but
 //    QLabel* paperlabel = new QLabel(this);
 
     int computerPlay = (qrand() % 3) + 1;
-    //1 is for Rock; 2 is for Paper; 3 is for Scissors
 
+    //clears text from labels
+    rocklabel->setText("");
+    paperlabel->setText("");
+    scissorlabel->setText("");
+
+    //1 is for Rock; 2 is for Paper; 3 is for Scissors
     switch (computerPlay) {
     case 1:
         //printf("Rock\n");
@@ -90,15 +99,20 @@ void rockPaperScissorsUI::on_paperButton_clicked() {//user clicked the paper but
         break;
 
     }
-
+    updateUI();
 }
 
-void rockPaperScissorsUI::on_scissorsButton_cLicked() { //user clicked the scissors button
+void rockPaperScissorsUI::on_scissorButton_clicked() { //user clicked the scissors button
     //printf("Paper button clicked\n");
 //    QLabel* scissorlabel = new QLabel(this);
 
     int computerPlay = (qrand() % 3) + 1;
     //1 is for Rock; 2 is for Paper; 3 is for Scissors
+
+    //clears text from labels
+    rocklabel->setText("");
+    paperlabel->setText("");
+    scissorlabel->setText("");
 
     switch (computerPlay) {
     case 1:
@@ -122,9 +136,9 @@ void rockPaperScissorsUI::on_scissorsButton_cLicked() { //user clicked the sciss
         break;
 
     }
-
+    updateUI();
 }
 
 void rockPaperScissorsUI::on_exitButton_clicked() {//user will exit this game and go play the others
-    this->close();
+    close();
 }

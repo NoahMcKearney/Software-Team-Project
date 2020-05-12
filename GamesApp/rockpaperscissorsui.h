@@ -18,6 +18,6 @@ private slots:
 //	void printStringRep();
 	void on_rockButton_clicked();
 	void on_paperButton_clicked();
-	void on_scissorsButton_cLicked();
+	void on_scissorButton_clicked();
 	void on_exitButton_clicked(); //write the function for this one
 };
