@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "hangman.h"
 #include "CUser.h"
-QString qs;
 
 Hangman::Hangman(QWidget* parent)
 	: QDialog(parent)

@@ -15,8 +15,7 @@ private:
 	Ui::GamePickerClass ui;
 private slots:
 	void on_ticTacToeButton_clicked();
-//	void on_memoryButton_clicked();
-        void on_rockPaperScissors_clicked();
+    void on_rockPaperScissorsButton_clicked();
 	void on_quitButton_clicked();
 	void on_hangmanButton_clicked();
 

@@ -2,7 +2,8 @@
 #include "GamePicker.h"
 #include "tic_tac_toe_game.h"
 #include "hangman.h"
-#include "rockpaperscissors.h"
+#include "rockpaperscissorsui.h"
+
 
 GamePicker::GamePicker(QWidget *parent)
 	: QWidget(parent)
@@ -22,9 +23,9 @@ void GamePicker::on_hangmanButton_clicked() {
 	dialogTwo.exec();
 }
 
-void GamePicker::on_rockPaperScissors_clicked(){
-        rockPaperScissors dialogThree(this);
-        dialogThree.exec();
+void GamePicker::on_rockPaperScissorsButton_clicked(){
+	rockPaperScissorsUI dialogThree(this);
+	dialogThree.exec();
 }
 
 void GamePicker::on_quitButton_clicked()

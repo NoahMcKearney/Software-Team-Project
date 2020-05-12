@@ -14,7 +14,7 @@
    <string>GamePicker</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 234, 207);</string>
+   <string notr="true"/>
   </property>
   <widget class="QLabel" name="emailLabel">
    <property name="geometry">
@@ -149,7 +149,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QPushButton" name="memoryButton">
+     <widget class="QPushButton" name="rockPaperScissorsButton">
       <property name="font">
        <font>
         <family>Tahoma</family>
