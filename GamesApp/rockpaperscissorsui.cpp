@@ -33,6 +33,14 @@ void rockPaperScissorsUI::rockButtonClicked() { //user clicked the rock button
 //    QLabel* rocklabel = new QLabel(this);
 
     int computerPlay = (qrand() % 3) + 1;
+
+
+    QString test = QString::number(computerPlay);
+    rocklabel->setText(test);
+
+
+
+
     //1 is for Rock; 2 is for Paper; 3 is for Scissors
 
     switch (computerPlay) {
