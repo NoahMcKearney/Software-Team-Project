@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Tic_Tac_Toe</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 234, 207);</string>
+  </property>
   <widget class="Line" name="line_2">
    <property name="geometry">
     <rect>
@@ -533,6 +536,9 @@ background-color: rgb(255, 255, 255);
      <pointsize>14</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
@@ -540,10 +546,10 @@ background-color: rgb(255, 255, 255);
   <widget class="QLabel" name="titleLabel">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>-10</y>
+     <x>140</x>
+     <y>20</y>
      <width>261</width>
-     <height>111</height>
+     <height>51</height>
     </rect>
    </property>
    <property name="font">
@@ -560,6 +566,9 @@ background-color: rgb(255, 255, 255);
    </property>
    <property name="text">
     <string>Tic Tac Toe</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
    </property>
   </widget>
   <widget class="QLabel" name="chooseLabel">
@@ -599,6 +608,9 @@ background-color: rgb(255, 255, 255);
     <font>
      <pointsize>14</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Reset</string>

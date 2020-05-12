@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>GamePicker</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 234, 207);</string>
+  </property>
   <widget class="QLabel" name="emailLabel">
    <property name="geometry">
     <rect>
@@ -71,7 +74,7 @@
     <string>Pick a Game!</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>

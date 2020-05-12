@@ -16,6 +16,9 @@
   <property name="windowTitle">
    <string>hangman</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 234, 207);</string>
+  </property>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
