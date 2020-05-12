@@ -14,7 +14,7 @@
    <string>rockPaperScissorsUI</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: rgb(238, 238, 238);</string>
   </property>
   <widget class="QPushButton" name="exitButton">
    <property name="geometry">

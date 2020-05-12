@@ -14,7 +14,7 @@
    <string>GamePicker</string>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: rgb(255, 244, 197);</string>
   </property>
   <widget class="QLabel" name="emailLabel">
    <property name="geometry">
@@ -57,9 +57,9 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>160</x>
      <y>20</y>
-     <width>131</width>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -80,7 +80,7 @@
      <x>20</x>
      <y>60</y>
      <width>418</width>
-     <height>58</height>
+     <height>68</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
