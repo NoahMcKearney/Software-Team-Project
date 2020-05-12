@@ -13,12 +13,11 @@ public:
 private:
 	Ui::rockPaperScissorsUI* ui;
 	void updateUI();
-
-//private slots:
+private slots:
 	//action buttons
 //	void printStringRep();
-	void rockButtonClicked();
-	void paperButtonClicked();
-	void scissorsButtonCLicked();
-	void exitButtonClicked(); //write the function for this one
+	void on_rockButton_clicked();
+	void on_paperButton_clicked();
+	void on_scissorsButton_cLicked();
+	void on_exitButton_clicked(); //write the function for this one
 };

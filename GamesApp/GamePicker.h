@@ -18,5 +18,4 @@ private slots:
     void on_rockPaperScissorsButton_clicked();
 	void on_quitButton_clicked();
 	void on_hangmanButton_clicked();
-
 };

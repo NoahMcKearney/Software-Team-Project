@@ -27,19 +27,12 @@ void rockPaperScissorsUI::updateUI() {
 	lossesLabel->setText(qLosses);
 }
 
-void rockPaperScissorsUI::rockButtonClicked() { //user clicked the rock button
+void rockPaperScissorsUI::on_rockButton_clicked() { //user clicked the rock button
     //printf("Rock button clicked\n");
     //srand((unsigned int)time(NULL));
 //    QLabel* rocklabel = new QLabel(this);
 
     int computerPlay = (qrand() % 3) + 1;
-
-
-    QString test = QString::number(computerPlay);
-    rocklabel->setText(test);
-
-
-
 
     //1 is for Rock; 2 is for Paper; 3 is for Scissors
 
@@ -66,7 +59,7 @@ void rockPaperScissorsUI::rockButtonClicked() { //user clicked the rock button
     }
 }
 
-void rockPaperScissorsUI::paperButtonClicked() {//user clicked the paper button
+void rockPaperScissorsUI::on_paperButton_clicked() {//user clicked the paper button
     //printf("Paper button clicked\n");
 //    QLabel* paperlabel = new QLabel(this);
 
@@ -100,7 +93,7 @@ void rockPaperScissorsUI::paperButtonClicked() {//user clicked the paper button
 
 }
 
-void rockPaperScissorsUI::scissorsButtonCLicked() { //user clicked the scissors button
+void rockPaperScissorsUI::on_scissorsButton_cLicked() { //user clicked the scissors button
     //printf("Paper button clicked\n");
 //    QLabel* scissorlabel = new QLabel(this);
 
@@ -132,6 +125,6 @@ void rockPaperScissorsUI::scissorsButtonCLicked() { //user clicked the scissors 
 
 }
 
-void rockPaperScissorsUI::exitButtonClicked() {//user will exit this game and go play the others
+void rockPaperScissorsUI::on_exitButton_clicked() {//user will exit this game and go play the others
     this->close();
 }

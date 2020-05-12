@@ -236,9 +236,9 @@
   <widget class="QLabel" name="rocklabel">
    <property name="geometry">
     <rect>
-     <x>260</x>
+     <x>220</x>
      <y>140</y>
-     <width>241</width>
+     <width>321</width>
      <height>41</height>
     </rect>
    </property>
@@ -249,9 +249,9 @@
   <widget class="QLabel" name="paperlabel">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>220</x>
      <y>190</y>
-     <width>221</width>
+     <width>311</width>
      <height>41</height>
     </rect>
    </property>
@@ -262,9 +262,9 @@
   <widget class="QLabel" name="scissorlabel">
    <property name="geometry">
     <rect>
-     <x>270</x>
+     <x>230</x>
      <y>240</y>
-     <width>231</width>
+     <width>311</width>
      <height>31</height>
     </rect>
    </property>
