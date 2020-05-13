@@ -14,13 +14,13 @@
    <string>rockPaperScissorsUI</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(238, 238, 238);</string>
+   <string notr="true">background-color: rgb(255, 234, 207);</string>
   </property>
   <widget class="QPushButton" name="exitButton">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>460</y>
+     <y>470</y>
      <width>112</width>
      <height>32</height>
     </rect>
@@ -158,8 +158,8 @@
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>10</y>
-     <width>361</width>
+     <y>20</y>
+     <width>261</width>
      <height>31</height>
     </rect>
    </property>
@@ -236,11 +236,18 @@
   <widget class="QLabel" name="rocklabel">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>140</y>
-     <width>321</width>
-     <height>41</height>
+     <x>230</x>
+     <y>150</y>
+     <width>341</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>31</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string/>
@@ -249,11 +256,18 @@
   <widget class="QLabel" name="paperlabel">
    <property name="geometry">
     <rect>
-     <x>220</x>
+     <x>230</x>
      <y>190</y>
-     <width>311</width>
+     <width>341</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>31</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string/>
@@ -264,9 +278,16 @@
     <rect>
      <x>230</x>
      <y>240</y>
-     <width>311</width>
+     <width>341</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>31</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string/>
