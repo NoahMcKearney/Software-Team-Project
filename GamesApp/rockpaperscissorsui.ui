@@ -33,9 +33,9 @@
    <property name="geometry">
     <rect>
      <x>290</x>
-     <y>280</y>
+     <y>309</y>
      <width>172</width>
-     <height>80</height>
+     <height>51</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -54,6 +54,13 @@
     </item>
     <item>
      <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>CHOOSE ONE</string>
       </property>
