@@ -42,19 +42,19 @@ void rockPaperScissorsUI::on_rockButton_clicked() { //user clicked the rock butt
     switch (computerPlay) {
     case 1:
         //this is a tie
-        rocklabel->setText("Computer chose rock. / It's a tie.");
+        rocklabel->setText("Computer chose rock. It's a tie!");
         rocklabel->show();
         tieCount++;
         break;
     case 2:
         //user lost
-        rocklabel->setText("Computer chose paper. / You lost. Paper beats rock.");
+        rocklabel->setText("Computer chose paper. You lost. Paper beats rock.");
         rocklabel->show();
         lossesCount++;
         break;
     case 3:
         //user won
-        rocklabel->setText("Computer chose scissors. / You win! Rock beats scissors.");
+        rocklabel->setText("Computer chose scissors. You win! Rock beats scissors.");
         rocklabel->show();
         winsCount++;
         break;
@@ -79,21 +79,21 @@ void rockPaperScissorsUI::on_paperButton_clicked() {//user clicked the paper but
     case 1:
         //printf("Rock\n");
         //printf("You win! Paper beats rock.\n");
-        paperlabel->setText("Computer chose rock. / You win! Paper beats rock.");
+        paperlabel->setText("Computer chose rock. You win! Paper beats rock.");
         paperlabel->show();
         winsCount++;
         break;
     case 2:
         //printf("Paper\n");
         //printf("Tie!\n");
-        paperlabel->setText("Computer chose paper. / It's a tie.");
+        paperlabel->setText("Computer chose paper. It's a tie!");
         paperlabel->show();
         tieCount++;
         break;
     case 3:
         //printf("Scissors\n");
         //printf("You lose! Scissors beats paper.\n");
-        paperlabel->setText("Computer chose scissors. / You lost. Scissors beats paper.");
+        paperlabel->setText("Computer chose scissors. You lost. Scissors beats paper.");
         paperlabel->show();
         lossesCount++;
         break;
@@ -118,19 +118,19 @@ void rockPaperScissorsUI::on_scissorButton_clicked() { //user clicked the scisso
     case 1:
         //printf("Rock\n");
         //printf("You lose. Rock beats scissors.\n");
-        scissorlabel->setText("Computer chose rock. / You lost. Rock beats scissors.");
+        scissorlabel->setText("Computer chose rock. You lost. Rock beats scissors.");
         scissorlabel->show();
         lossesCount++;
         break;
     case 2:
         //printf("Paper\n");
         //printf("You win! Scissors beats paper.\n");
-        scissorlabel->setText("Computer chose paper. / You win! Scissors beats paper.");
+        scissorlabel->setText("Computer chose paper. You win! Scissors beats paper.");
         scissorlabel->show();
         winsCount++;
         break;
     case 3:
-        scissorlabel->setText("Computer chose scissors. / It's a tie.");
+        scissorlabel->setText("Computer chose scissors. It's a tie!");
         scissorlabel->show();
         tieCount++;
         break;
