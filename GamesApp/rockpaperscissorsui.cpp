@@ -31,7 +31,11 @@ void rockPaperScissorsUI::on_rockButton_clicked() { //user clicked the rock butt
     //srand((unsigned int)time(NULL));
 //    QLabel* rocklabel = new QLabel(this);
 
-    int computerPlay = (qrand() % 3) + 1;
+    int computerPlay = (qrand() % 3) + 1; //will generate random numbers from 1-3 for the computer
+	/*
+	If the number is 1, then the computer chose rock. If the number is 2, then the computer chose paper.
+	If the number is 3, then the computer chose scissors. 
+	*/
 
     //clears text from labels
     rocklabel->setText("");
@@ -67,7 +71,11 @@ void rockPaperScissorsUI::on_paperButton_clicked() {//user clicked the paper but
     //printf("Paper button clicked\n");
 //    QLabel* paperlabel = new QLabel(this);
 
-    int computerPlay = (qrand() % 3) + 1;
+    int computerPlay = (qrand() % 3) + 1;//will generate random numbers from 1-3 for the computer
+	/*
+	If the number is 1, then the computer chose rock. If the number is 2, then the computer chose paper.
+	If the number is 3, then the computer chose scissors. 
+	*/
 
     //clears text from labels
     rocklabel->setText("");
@@ -106,7 +114,11 @@ void rockPaperScissorsUI::on_scissorButton_clicked() { //user clicked the scisso
     //printf("Paper button clicked\n");
 //    QLabel* scissorlabel = new QLabel(this);
 
-    int computerPlay = (qrand() % 3) + 1;
+    int computerPlay = (qrand() % 3) + 1;//will generate random numbers from 1-3 for the computer
+	/*
+	If the number is 1, then the computer chose rock. If the number is 2, then the computer chose paper.
+	If the number is 3, then the computer chose scissors. 
+	*/
     //1 is for Rock; 2 is for Paper; 3 is for Scissors
 
     //clears text from labels
