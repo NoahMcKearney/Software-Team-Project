@@ -4,13 +4,13 @@
 #include "hangman.h"
 #include "rockpaperscissorsui.h"
 
-
 GamePicker::GamePicker(QWidget *parent)
 	: QWidget(parent)
 {
 	ui.setupUi(this);
 }
 
+// Buttons for main form
 void GamePicker::on_ticTacToeButton_clicked()
 {
     Tic_Tac_Toe dialog(this);

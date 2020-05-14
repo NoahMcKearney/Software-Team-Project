@@ -962,7 +962,7 @@ QPushButton:pressed {
 }</string>
    </property>
    <property name="text">
-    <string>Quit</string>
+    <string>Exit</string>
    </property>
   </widget>
   <widget class="QPushButton" name="revealButton">
@@ -1207,9 +1207,9 @@ QPushButton:pressed {
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>210</y>
+     <y>220</y>
      <width>20</width>
-     <height>51</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="frameShadow">
